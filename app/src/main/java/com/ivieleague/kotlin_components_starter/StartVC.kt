@@ -16,6 +16,7 @@ import com.lightningkite.kotlincomponents.viewcontroller.AutocleanViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
 import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
 import com.lightningkite.kotlincomponents.viewcontroller.implementations.dialog
+import com.lightningkite.kotlincomponents.viewcontroller.linearLayout
 import org.jetbrains.anko.*
 
 /**
@@ -23,7 +24,12 @@ import org.jetbrains.anko.*
  */
 class StartVC(val stack: VCStack) : AutocleanViewController() {
 
-    val imageBond: Bond<Bitmap?> = listener(Bond<Bitmap?>(null))
+    val imageBond: Bond<Bitmap?> = listener(object : Bond<Bitmap?>(null) {
+        override fun set(v: Bitmap?) {
+            this.myValue?.recycle()
+            super.set(v)
+        }
+    })
     var image: Bitmap? by imageBond
 
     val loadingBond: Bond<Boolean> = listener(Bond(false))
@@ -31,7 +37,7 @@ class StartVC(val stack: VCStack) : AutocleanViewController() {
 
     override fun make(activity: VCActivity): View {
 
-        return _LinearLayout(activity).apply {
+        return linearLayout(activity) {
             orientation = LinearLayout.VERTICAL
             setGravity(Gravity.CENTER)
 
