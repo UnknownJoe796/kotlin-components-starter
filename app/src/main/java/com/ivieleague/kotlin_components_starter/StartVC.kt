@@ -11,6 +11,7 @@ import com.lightningkite.kotlincomponents.logging.logD
 import com.lightningkite.kotlincomponents.logging.logE
 import com.lightningkite.kotlincomponents.networking.Networking
 import com.lightningkite.kotlincomponents.ui.inputDialog
+import com.lightningkite.kotlincomponents.ui.progressButton
 import com.lightningkite.kotlincomponents.vertical
 import com.lightningkite.kotlincomponents.viewcontroller.AutocleanViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
@@ -42,7 +43,7 @@ class StartVC(val stack: VCStack) : AutocleanViewController() {
             setGravity(Gravity.CENTER)
 
             textView("Hello World") {
-                setGravity(Gravity.CENTER)
+                gravity = Gravity.CENTER
             }
 
             button("Get an Image") {
@@ -53,12 +54,14 @@ class StartVC(val stack: VCStack) : AutocleanViewController() {
                 }
             }
 
-            button("Enter an image URL") {
+            progressButton("Enter an image URL") {
                 onClick {
                     activity.inputDialog("Enter an image URL", "URL") { url ->
                         if (url != null) {
+                            running = true
                             loading = true
                             Networking.get(url) {
+                                running = false
                                 loading = false
                                 if (it.isSuccessful) {
                                     image = it.bitmap()
@@ -73,14 +76,30 @@ class StartVC(val stack: VCStack) : AutocleanViewController() {
                     }
                 }
             }
+
+            progressButton("Lorem Pixel") {
+                onClick {
+                    running = true
+                    loading = true
+                    Networking.get("http://lorempixel.com/300/300") {
+                        running = false
+                        loading = false
+                        if (it.isSuccessful) {
+                            image = it.bitmap()
+                        } else {
+                            image = null
+                        }
+                    }
+                }
+            }
             transitionView {
 
                 textView("Loading...") {
-                    setGravity(Gravity.CENTER)
+                    gravity = Gravity.CENTER
                 }.tag("loading")
 
                 textView("No image.") {
-                    setGravity(Gravity.CENTER)
+                    gravity = Gravity.CENTER
                 }.tag("none")
 
                 imageView() {
