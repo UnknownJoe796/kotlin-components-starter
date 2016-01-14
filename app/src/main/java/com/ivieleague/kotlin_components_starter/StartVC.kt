@@ -123,6 +123,12 @@ class StartVC(val stack: VCStack) : AutocleanViewController() {
                 }
             }
 
+            button("Test Socket IO") {
+                onClick {
+                    stack.push(SocketIOVC(stack))
+                }
+            }
+
             button("I wanna do something else") {
                 onClick {
                     stack.push(AnotherVC(stack))

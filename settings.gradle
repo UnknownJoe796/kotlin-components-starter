@@ -1,1 +1,1 @@
-include ':app', ':kotlin-components'
+include ':app', ':kotlin-components', ':kotlin-components-socket-io'
