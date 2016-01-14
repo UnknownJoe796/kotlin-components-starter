@@ -5,9 +5,6 @@ import com.github.nkzawa.socketio.client.IO
 import com.github.nkzawa.socketio.client.Socket
 import com.lightningkite.kotlincomponents.databinding.Bond
 import com.lightningkite.kotlincomponents.databinding.bindString
-import com.lightningkite.kotlincomponents.socketio.on
-import com.lightningkite.kotlincomponents.socketio.onConnectError
-import com.lightningkite.kotlincomponents.socketio.onConnect
 import com.lightningkite.kotlincomponents.verticalLayout
 import com.lightningkite.kotlincomponents.viewcontroller.AutocleanViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
@@ -17,6 +14,7 @@ import org.jetbrains.anko.onClick
 import org.jetbrains.anko.textView
 
 /**
+ * A ViewController that allows the user to test out SocketIO
  * Created by jivie on 1/14/16.
  */
 class SocketIOVC(val stack: VCStack) : AutocleanViewController() {

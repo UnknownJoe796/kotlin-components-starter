@@ -1,15 +1,11 @@
-package com.lightningkite.kotlincomponents.socketio
+package com.ivieleague.kotlin_components_starter
 
-import android.os.Handler
-import android.os.Looper
-import com.github.nkzawa.emitter.Emitter
-import com.github.nkzawa.socketio.client.IO
 import com.github.nkzawa.socketio.client.Socket
 import com.lightningkite.kotlincomponents.async.Async
-import org.json.JSONArray
 import org.json.JSONObject
 
 /**
+ * Various extensions to make using SocketIO easier.
  * Created by jivie on 1/14/16.
  */
 
@@ -55,7 +51,7 @@ inline fun Socket.onConnect(crossinline action:()->Unit) = on(Socket.EVENT_CONNE
 inline fun Socket.onConnectError(crossinline action:(error:Any)->Unit) = on<Any>(Socket.EVENT_CONNECT_ERROR, action)
 inline fun Socket.onDisconnect(crossinline action:()->Unit) = on(Socket.EVENT_DISCONNECT, action)
 inline fun Socket.onReconnect(crossinline action:(attempts:Int)->Unit) = on(Socket.EVENT_RECONNECT, action)
-inline fun Socket.onError(crossinline action:(error:JSONObject)->Unit) = on(Socket.EVENT_ERROR, action)
+inline fun Socket.onError(crossinline action: (error: JSONObject) -> Unit) = on(Socket.EVENT_ERROR, action)
 /*
 var app = require('express')();
 var http = require('http').Server(app);

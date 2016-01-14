@@ -12,15 +12,14 @@ import com.lightningkite.kotlincomponents.logging.logE
 import com.lightningkite.kotlincomponents.networking.Networking
 import com.lightningkite.kotlincomponents.ui.inputDialog
 import com.lightningkite.kotlincomponents.ui.progressButton
-import com.lightningkite.kotlincomponents.vertical
 import com.lightningkite.kotlincomponents.viewcontroller.AutocleanViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
 import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
-import com.lightningkite.kotlincomponents.viewcontroller.implementations.dialog
 import com.lightningkite.kotlincomponents.viewcontroller.linearLayout
 import org.jetbrains.anko.*
 
 /**
+ * A ViewController with various tests on it.
  * Created by josep on 11/6/2015.
  */
 class StartVC(val stack: VCStack) : AutocleanViewController() {
