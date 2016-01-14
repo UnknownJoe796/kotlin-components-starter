@@ -87,9 +87,9 @@
     <orderEntry type="library" exported="" name="kotson-1.5.1" level="project" />
     <orderEntry type="library" exported="" name="anko-common-0.8" level="project" />
     <orderEntry type="library" exported="" name="okio-1.6.0" level="project" />
-    <orderEntry type="library" exported="" name="gson-2.4" level="project" />
-    <orderEntry type="library" exported="" name="kotlin-runtime-1.0.0-beta-4584" level="project" />
     <orderEntry type="library" exported="" name="socket.io-client-0.3.0" level="project" />
+    <orderEntry type="library" exported="" name="kotlin-runtime-1.0.0-beta-4584" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.4" level="project" />
     <orderEntry type="library" exported="" name="kotlin-stdlib-1.0.0-beta-4584" level="project" />
     <orderEntry type="library" exported="" name="Java-WebSocket-1.3.0" level="project" />
     <orderEntry type="library" exported="" name="okhttp-2.5.0" level="project" />
@@ -97,6 +97,5 @@
     <orderEntry type="library" exported="" name="support-annotations-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="engine.io-client-0.3.1" level="project" />
     <orderEntry type="module" module-name="kotlin-components" exported="" />
-    <orderEntry type="module" module-name="kotlin-components-socket-io" exported="" />
   </component>
 </module>

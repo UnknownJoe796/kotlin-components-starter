@@ -2,38 +2,10 @@
 <items version="2" >
 
     <item
-        jar="/home/jivie/.gradle/caches/modules-2/files-2.1/org.java-websocket/Java-WebSocket/1.3.0/db2658f013fb163de4a99274c2eb9e17efe535d2/Java-WebSocket-1.3.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="db2658f013fb163de4a99274c2eb9e17efe535d2">
-        <dex dex="/home/jivie/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/Java-WebSocket-1.3.0-b79843241b670c4fde86fd6bb03b1f9b903b2bbe.jar" />
-    </item>
-    <item
-        jar="/home/jivie/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/socket.io-client/0.3.0/8dfd7cf8d1124acb027b3ffd53eafcc518af3ba9/socket.io-client-0.3.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8dfd7cf8d1124acb027b3ffd53eafcc518af3ba9">
-        <dex dex="/home/jivie/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/socket.io-client-0.3.0-d88e2811f3ddac9797862494ed7562a4bb642207.jar" />
-    </item>
-    <item
-        jar="/home/jivie/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/kotlin-components-starter/kotlin-components/unspecified/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ed9307b23e1b483c57ea7e5ea363ba5992eb8f7b">
-        <dex dex="/home/jivie/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/classes-4ecd7a9b65f75593bbd9dd0c8cf5a5aa3666ba45.jar" />
-    </item>
-    <item
-        jar="/home/jivie/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/engine.io-client/0.3.1/3ca9d0d53a27ecb88538ed874be417cfa827db5d/engine.io-client-0.3.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3ca9d0d53a27ecb88538ed874be417cfa827db5d">
-        <dex dex="/home/jivie/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/engine.io-client-0.3.1-49e9398cc80e117a5cfd4efad5b1db18c49944b2.jar" />
-    </item>
-    <item
         jar="/home/jivie/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/kotlin-components-starter/kotlin-components-socket-io/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="942dec5a6a2bfc7889844923181c6f8014721e9f">
+        sha1="9a21da7d0956b9d069427a5bec76ed186016d3ef">
         <dex dex="/home/jivie/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/classes-ddbde441012f681092c6551ed4ad056f87594868.jar" />
     </item>
 
