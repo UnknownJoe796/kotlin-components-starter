@@ -5,7 +5,7 @@
         jar="/home/jivie/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/kotlin-components-starter/kotlin-components/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="736e4fff15e2d9503e41a8eb4305b3b1e8c55fe4">
+        sha1="8136541c23bd456a0d3442f5259b2da764e8dc03">
         <dex dex="/home/jivie/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-components-starter-kotlin-components-unspecified_4ecd7a9b65f75593bbd9dd0c8cf5a5aa3666ba45.jar" />
     </item>
 
