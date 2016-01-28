@@ -9,7 +9,9 @@ import com.lightningkite.kotlincomponents.image.getImageFromGallery
 import com.lightningkite.kotlincomponents.logging.logD
 import com.lightningkite.kotlincomponents.logging.logE
 import com.lightningkite.kotlincomponents.networking.Networking
-import com.lightningkite.kotlincomponents.observable.Observable
+import com.lightningkite.kotlincomponents.observable.KObservable
+import com.lightningkite.kotlincomponents.observable.bind
+import com.lightningkite.kotlincomponents.observable.bindString
 import com.lightningkite.kotlincomponents.ui.inputDialog
 import com.lightningkite.kotlincomponents.ui.progressButton
 import com.lightningkite.kotlincomponents.viewcontroller.StandardViewController
@@ -24,7 +26,7 @@ import org.jetbrains.anko.*
  */
 class StartVC(val stack: VCStack) : StandardViewController() {
 
-    val imageObs: Observable<Bitmap?> = object : Observable<Bitmap?>(null) {
+    val imageObs: KObservable<Bitmap?> = object : KObservable<Bitmap?>(null) {
         override fun set(v: Bitmap?) {
             this.value?.recycle()
             super.set(v)
@@ -32,10 +34,10 @@ class StartVC(val stack: VCStack) : StandardViewController() {
     }
     var image: Bitmap? by imageObs
 
-    val loadingObs: Observable<Boolean> = Observable(false)
+    val loadingObs: KObservable<Boolean> = KObservable(false)
     var loading: Boolean by loadingObs
 
-    val textObs = Observable("Start Text")
+    val textObs = KObservable("Start Text")
     var text by textObs
 
     override fun makeView(activity: VCActivity): View = linearLayout(activity) {
@@ -111,17 +113,17 @@ class StartVC(val stack: VCStack) : StandardViewController() {
             }.tag("none")
 
             imageView() {
-                connect(imageObs) {
-                    if (it == null) return@connect
+                bind(imageObs) {
+                    if (it == null) return@bind
                     imageBitmap = it
                 }
             }.tag("image")
-            connect(loadingObs) {
+            bind(loadingObs) {
                 if (it) {
                     animate("loading")
                 }
             }
-            connect(imageObs) {
+            bind(imageObs) {
                 logD(it)
                 if (it == null) {
                     animate("none")

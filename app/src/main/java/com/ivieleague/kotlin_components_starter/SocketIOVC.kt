@@ -3,10 +3,10 @@ package com.ivieleague.kotlin_components_starter
 import android.view.View
 import com.github.nkzawa.socketio.client.IO
 import com.github.nkzawa.socketio.client.Socket
-import com.lightningkite.kotlincomponents.databinding.Bond
-import com.lightningkite.kotlincomponents.databinding.bindString
+import com.lightningkite.kotlincomponents.observable.KObservable
+import com.lightningkite.kotlincomponents.observable.bindString
 import com.lightningkite.kotlincomponents.verticalLayout
-import com.lightningkite.kotlincomponents.viewcontroller.AutocleanViewController
+import com.lightningkite.kotlincomponents.viewcontroller.ViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
 import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
 import org.jetbrains.anko.button
@@ -17,18 +17,17 @@ import org.jetbrains.anko.textView
  * A ViewController that allows the user to test out SocketIO
  * Created by jivie on 1/14/16.
  */
-class SocketIOVC(val stack: VCStack) : AutocleanViewController() {
+class SocketIOVC(val stack: VCStack) : ViewController {
 
-    val statusBond: Bond<String> = listener(Bond("Not created."))
-    var status: String by statusBond
+    val statusKObservable: KObservable<String> = KObservable("Not created.")
+    var status: String by statusKObservable
 
-    val messagesBond: Bond<String> = listener(Bond(""))
-    var messages: String by messagesBond
+    val messagesKObservable: KObservable<String> = KObservable("")
+    var messages: String by messagesKObservable
 
     var socket: Socket? = null
 
     override fun make(activity: VCActivity): View {
-        super.make(activity)
         return verticalLayout(activity) {
             button("Start Socket IO") {
                 onClick {
@@ -41,7 +40,7 @@ class SocketIOVC(val stack: VCStack) : AutocleanViewController() {
                 }
             }
             textView("Status:")
-            textView { bindString(statusBond) }
+            textView { bindString(statusKObservable) }
             button("Stop Socket IO") {
                 onClick {
                     stopSocket()
@@ -53,7 +52,7 @@ class SocketIOVC(val stack: VCStack) : AutocleanViewController() {
                 }
             }
             textView("Messages:")
-            textView { bindString(messagesBond) }
+            textView { bindString(messagesKObservable) }
         }
     }
 
