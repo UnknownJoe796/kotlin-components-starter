@@ -139,6 +139,12 @@ class StartVC(val stack: VCStack) : StandardViewController() {
             }
         }
 
+        button("Test List") {
+            onClick {
+                stack.push(ListTestVC(stack))
+            }
+        }
+
         button("I wanna do something else") {
             onClick {
                 stack.push(AnotherVC(stack))
