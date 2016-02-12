@@ -11,7 +11,7 @@ class MainActivity : VCActivity() {
         val stack: VCStack = VCStack()
 
         init {
-            stack.push(StartVC(stack))
+            stack.push(MainVC(stack))
         }
     }
 

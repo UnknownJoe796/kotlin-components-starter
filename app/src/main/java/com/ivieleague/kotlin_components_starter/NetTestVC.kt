@@ -24,7 +24,7 @@ import org.jetbrains.anko.*
  * A ViewController with various tests on it.
  * Created by josep on 11/6/2015.
  */
-class StartVC(val stack: VCStack) : StandardViewController() {
+class NetTestVC(val stack: VCStack) : StandardViewController() {
 
     val imageObs: KObservable<Bitmap?> = object : KObservable<Bitmap?>(null) {
         override fun set(v: Bitmap?) {
