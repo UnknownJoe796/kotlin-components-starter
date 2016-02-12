@@ -9,7 +9,6 @@ import android.widget.LinearLayout
 import com.lightningkite.kotlincomponents.animation.animateHeightUpdate
 import com.lightningkite.kotlincomponents.animation.transitionView
 import com.lightningkite.kotlincomponents.image.getImageFromGallery
-import com.lightningkite.kotlincomponents.logging.logD
 import com.lightningkite.kotlincomponents.logging.logE
 import com.lightningkite.kotlincomponents.networking.Networking
 import com.lightningkite.kotlincomponents.observable.KObservable
@@ -127,13 +126,13 @@ class NetTestVC(val stack: VCStack) : StandardViewController() {
                     update()
                 }
             }.tag("image")
+
             bind(loadingObs) {
                 if (it) {
                     animate("loading")
                 }
             }
             bind(imageObs) {
-                logD(it)
                 if (it == null) {
                     animate("none")
                 } else {

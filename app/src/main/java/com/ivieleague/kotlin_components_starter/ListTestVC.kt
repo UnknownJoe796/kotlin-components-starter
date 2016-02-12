@@ -14,6 +14,7 @@ import com.lightningkite.kotlincomponents.observable.bindString
 import com.lightningkite.kotlincomponents.selectableItemBackgroundResource
 import com.lightningkite.kotlincomponents.toFloatMaybe
 import com.lightningkite.kotlincomponents.ui.horizontalDivider
+import com.lightningkite.kotlincomponents.ui.snackbar
 import com.lightningkite.kotlincomponents.ui.stickyHeaders
 import com.lightningkite.kotlincomponents.ui.verticalRecyclerView
 import com.lightningkite.kotlincomponents.viewcontroller.StandardViewController
@@ -42,7 +43,6 @@ class ListTestVC(val stack: VCStack) : StandardViewController() {
                     bindString(obs)
                     gravity = Gravity.CENTER
                     textSize = 18f
-                    textColor = Color.BLACK
                     minimumHeight = dip(40)
                     backgroundResource = selectableItemBackgroundResource
                     onLongClick {
@@ -62,7 +62,6 @@ class ListTestVC(val stack: VCStack) : StandardViewController() {
                 TextView(context).apply{
                     text = it
                     backgroundColor = resources.getColor(R.color.colorPrimary)
-                    textColor = Color.WHITE
                     padding = dip(8)
                 }
             })
@@ -72,13 +71,27 @@ class ListTestVC(val stack: VCStack) : StandardViewController() {
                             Color.RED,
                             resources.getDrawable(android.R.drawable.ic_menu_delete),
                             { true },
-                            { items.removeAt(it) }
+                            { index ->
+                                val item = items.removeAt(index)
+                                snackbar("Item deleted.") {
+                                    setAction("Undo") {
+                                        items.add(index, item)
+                                    }
+                                }
+                            }
                     ),
                     ActionItemTouchHelperListener.SwipeAction(
                             Color.RED,
                             resources.getDrawable(android.R.drawable.ic_menu_delete),
                             { true },
-                            { items.removeAt(it) }
+                            { index ->
+                                val item = items.removeAt(index)
+                                snackbar("Item deleted.") {
+                                    setAction("Undo") {
+                                        items.add(index, item)
+                                    }
+                                }
+                            }
                     ),
                     dip(4)
             )
