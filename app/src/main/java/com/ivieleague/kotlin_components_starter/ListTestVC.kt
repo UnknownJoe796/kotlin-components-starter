@@ -1,17 +1,20 @@
 package com.ivieleague.kotlin_components_starter
 
+import android.content.res.Resources
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.View
 import android.widget.TextView
 import com.lightningkite.kotlincomponents.adapter.ActionItemTouchHelperListener
-import com.lightningkite.kotlincomponents.adapter.horizontalDivider
 import com.lightningkite.kotlincomponents.adapter.makeAdapter
 import com.lightningkite.kotlincomponents.adapter.swipe
 import com.lightningkite.kotlincomponents.observable.KObservableList
 import com.lightningkite.kotlincomponents.observable.bindString
 import com.lightningkite.kotlincomponents.selectableItemBackgroundResource
+import com.lightningkite.kotlincomponents.toFloatMaybe
+import com.lightningkite.kotlincomponents.ui.horizontalDivider
+import com.lightningkite.kotlincomponents.ui.stickyHeaders
 import com.lightningkite.kotlincomponents.ui.verticalRecyclerView
 import com.lightningkite.kotlincomponents.viewcontroller.StandardViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
@@ -24,29 +27,17 @@ import org.jetbrains.anko.*
  */
 class ListTestVC(val stack: VCStack) : StandardViewController() {
 
-    val items = KObservableList(arrayListOf<String>())
+    val items = KObservableList(arrayListOf<String>("first", "second", "third", "fourth", "fifth"))
+
+    override fun getTitle(resources: Resources): String = "List Test"
 
     override fun makeView(activity: VCActivity): View = verticalLayout(activity) {
 
         gravity = Gravity.CENTER
 
-        items.add("First")
-        items.add("Second")
-        items.add("Third")
-        items.add("Fourth")
-        items.add("Fifth")
-
-        textView("List Test") {
-            gravity = Gravity.CENTER
-            textSize = 18f
-            textColor = Color.BLACK
-            minimumHeight = dip(40)
-            backgroundColor = resources.getColor(R.color.colorPrimary)
-        }.lparams(matchParent, wrapContent)
-
         verticalRecyclerView() {
 
-            makeAdapter(items) {
+            val adap = makeAdapter(items) {
                 TextView(activity).apply {
                     bindString(it)
                     gravity = Gravity.CENTER
@@ -56,6 +47,21 @@ class ListTestVC(val stack: VCStack) : StandardViewController() {
                     backgroundResource = selectableItemBackgroundResource
                 }.lparams(matchParent, wrapContent)
             }
+
+            stickyHeaders(adap, {
+                when(it.toFloatMaybe()){
+                    null -> "Not a Number"
+                    in 0f .. .5f -> "Low"
+                    else -> "High"
+                }
+            }, {
+                TextView(context).apply{
+                    text = it
+                    backgroundColor = resources.getColor(R.color.colorPrimary)
+                    textColor = Color.WHITE
+                    padding = dip(8)
+                }
+            })
 
             swipe(
                     ActionItemTouchHelperListener.SwipeAction(

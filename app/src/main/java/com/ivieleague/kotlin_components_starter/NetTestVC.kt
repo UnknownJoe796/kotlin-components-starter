@@ -1,5 +1,6 @@
 package com.ivieleague.kotlin_components_starter
 
+import android.content.res.Resources
 import android.graphics.Bitmap
 import android.view.Gravity
 import android.view.View
@@ -25,6 +26,8 @@ import org.jetbrains.anko.*
  * Created by josep on 11/6/2015.
  */
 class NetTestVC(val stack: VCStack) : StandardViewController() {
+
+    override fun getTitle(resources: Resources): String = "Net Test"
 
     val imageObs: KObservable<Bitmap?> = object : KObservable<Bitmap?>(null) {
         override fun set(v: Bitmap?) {

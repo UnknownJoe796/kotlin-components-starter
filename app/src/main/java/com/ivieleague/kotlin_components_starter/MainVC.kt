@@ -22,8 +22,6 @@ class MainVC(val stack: VCStack) : StandardViewController() {
 
     override fun makeView(activity: VCActivity): View = verticalLayout(activity) {
         tabLayout {
-            backgroundColor = Color.BLACK
-            setTabTextColors(Color.BLUE, Color.LTGRAY)
             setUpWithVCTabs(tabs, {}, {})
         }.lparams(matchParent, wrapContent)
         viewContainer(tabs).lparams(matchParent, 0, 1f)

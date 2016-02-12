@@ -1,5 +1,6 @@
 package com.ivieleague.kotlin_components_starter
 
+import android.content.res.Resources
 import android.view.View
 import com.github.nkzawa.socketio.client.IO
 import com.github.nkzawa.socketio.client.Socket
@@ -18,6 +19,8 @@ import org.jetbrains.anko.textView
  * Created by jivie on 1/14/16.
  */
 class SocketIOVC(val stack: VCStack) : ViewController {
+
+    override fun getTitle(resources: Resources): String = "SocketIO"
 
     val statusKObservable: KObservable<String> = KObservable("Not created.")
     var status: String by statusKObservable
