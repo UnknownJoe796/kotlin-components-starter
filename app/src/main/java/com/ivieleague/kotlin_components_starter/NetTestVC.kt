@@ -4,7 +4,9 @@ import android.content.res.Resources
 import android.graphics.Bitmap
 import android.view.Gravity
 import android.view.View
+import android.widget.ImageView
 import android.widget.LinearLayout
+import com.lightningkite.kotlincomponents.animation.animateHeightUpdate
 import com.lightningkite.kotlincomponents.animation.transitionView
 import com.lightningkite.kotlincomponents.image.getImageFromGallery
 import com.lightningkite.kotlincomponents.logging.logD
@@ -13,6 +15,7 @@ import com.lightningkite.kotlincomponents.networking.Networking
 import com.lightningkite.kotlincomponents.observable.KObservable
 import com.lightningkite.kotlincomponents.observable.bind
 import com.lightningkite.kotlincomponents.observable.bindString
+import com.lightningkite.kotlincomponents.random
 import com.lightningkite.kotlincomponents.ui.inputDialog
 import com.lightningkite.kotlincomponents.ui.progressButton
 import com.lightningkite.kotlincomponents.viewcontroller.StandardViewController
@@ -94,7 +97,7 @@ class NetTestVC(val stack: VCStack) : StandardViewController() {
             onClick {
                 running = true
                 loading = true
-                Networking.get("http://lorempixel.com/300/300") {
+                Networking.get("http://lorempixel.com/${(200..600).random()}/${(200..600).random()}") {
                     running = false
                     loading = false
                     if (it.isSuccessful) {
@@ -116,9 +119,12 @@ class NetTestVC(val stack: VCStack) : StandardViewController() {
             }.tag("none")
 
             imageView() {
+                val update = animateHeightUpdate(300, 0f)
+                scaleType = ImageView.ScaleType.CENTER_CROP
                 bind(imageObs) {
                     if (it == null) return@bind
                     imageBitmap = it
+                    update()
                 }
             }.tag("image")
             bind(loadingObs) {
