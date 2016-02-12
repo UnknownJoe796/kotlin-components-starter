@@ -37,14 +37,18 @@ class ListTestVC(val stack: VCStack) : StandardViewController() {
 
         verticalRecyclerView() {
 
-            val adap = makeAdapter(items) {
+            val adap = makeAdapter(items) { obs ->
                 TextView(activity).apply {
-                    bindString(it)
+                    bindString(obs)
                     gravity = Gravity.CENTER
                     textSize = 18f
                     textColor = Color.BLACK
                     minimumHeight = dip(40)
                     backgroundResource = selectableItemBackgroundResource
+                    onLongClick {
+                        items.removeAt(obs.position)
+                        true
+                    }
                 }.lparams(matchParent, wrapContent)
             }
 
