@@ -1,14 +1,18 @@
 package com.ivieleague.kotlin_components_starter
 
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.View
 import android.widget.TextView
-import com.lightningkite.kotlincomponents.adapter.lightningAdapter
-import com.lightningkite.kotlincomponents.observable.KObservable
+import com.lightningkite.kotlincomponents.adapter.ActionItemTouchHelperListener
+import com.lightningkite.kotlincomponents.adapter.horizontalDivider
+import com.lightningkite.kotlincomponents.adapter.makeAdapter
+import com.lightningkite.kotlincomponents.adapter.swipe
+import com.lightningkite.kotlincomponents.observable.KObservableList
 import com.lightningkite.kotlincomponents.observable.bindString
 import com.lightningkite.kotlincomponents.selectableItemBackgroundResource
-import com.lightningkite.kotlincomponents.ui.swipeToDismiss
+import com.lightningkite.kotlincomponents.ui.verticalRecyclerView
 import com.lightningkite.kotlincomponents.viewcontroller.StandardViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
 import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
@@ -20,8 +24,7 @@ import org.jetbrains.anko.*
  */
 class ListTestVC(val stack: VCStack) : StandardViewController() {
 
-    val itemsObs = KObservable(arrayListOf<String>())
-    var items by itemsObs
+    val items = KObservableList(arrayListOf<String>())
 
     override fun makeView(activity: VCActivity): View = verticalLayout(activity) {
 
@@ -41,9 +44,9 @@ class ListTestVC(val stack: VCStack) : StandardViewController() {
             backgroundColor = resources.getColor(R.color.colorPrimary)
         }.lparams(matchParent, wrapContent)
 
-        listView() {
+        verticalRecyclerView() {
 
-            val myAdapter = lightningAdapter(itemsObs) {
+            makeAdapter(items) {
                 TextView(activity).apply {
                     bindString(it)
                     gravity = Gravity.CENTER
@@ -51,13 +54,34 @@ class ListTestVC(val stack: VCStack) : StandardViewController() {
                     textColor = Color.BLACK
                     minimumHeight = dip(40)
                     backgroundResource = selectableItemBackgroundResource
-                }
+                }.lparams(matchParent, wrapContent)
             }
 
-            adapter = myAdapter
+            swipe(
+                    ActionItemTouchHelperListener.SwipeAction(
+                            Color.RED,
+                            resources.getDrawable(android.R.drawable.ic_menu_delete),
+                            { true },
+                            { items.removeAt(it) }
+                    ),
+                    ActionItemTouchHelperListener.SwipeAction(
+                            Color.RED,
+                            resources.getDrawable(android.R.drawable.ic_menu_delete),
+                            { true },
+                            { items.removeAt(it) }
+                    ),
+                    dip(4)
+            )
 
-            swipeToDismiss({ true }, { items.removeAt(it); itemsObs.update() }, { myAdapter.notifyDataSetChanged() })
+            horizontalDivider(ColorDrawable(Color.LTGRAY))
 
         }.lparams(matchParent, 0, 1f)
+
+        button("Add") {
+            onClick {
+                items.add(Math.random().toString())
+            }
+        }.lparams(matchParent, wrapContent)
+
     }
 }
