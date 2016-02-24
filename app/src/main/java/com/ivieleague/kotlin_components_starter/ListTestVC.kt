@@ -28,7 +28,7 @@ import org.jetbrains.anko.*
  */
 class ListTestVC(val stack: VCStack) : StandardViewController() {
 
-    val items = KObservableList(arrayListOf<String>("first", "second", "third", "fourth", "fifth"))
+    val items = KObservableList(arrayListOf("first", "second", "third", "fourth", "fifth"))
 
     override fun getTitle(resources: Resources): String = "List Test"
 

@@ -2,9 +2,7 @@ package com.ivieleague.kotlin_components_starter
 
 import android.support.v7.widget.Toolbar
 import android.view.Gravity
-import android.view.MenuItem
 import android.view.View
-import com.lightningkite.kotlincomponents.addView
 import com.lightningkite.kotlincomponents.ui.*
 import com.lightningkite.kotlincomponents.viewcontroller.StandardViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
@@ -34,26 +32,13 @@ class MainVC(val stack: VCStack) : StandardViewController() {
             subtitle = "Test Subtitle"
             setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha)
             setNavigationOnClickListener { activity.onBackPressed() }
-            actionMenuView() {
-                menu.add("A").apply {
-                    setIcon(R.drawable.abc_ic_menu_selectall_mtrl_alpha)
-                    this.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
-                }
-                menu.add("B").apply {
-                    setIcon(R.drawable.abc_ic_menu_share_mtrl_alpha)
-                    this.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
-                }
-                menu.add("c").apply {
-                    setIcon(android.R.drawable.ic_menu_call)
-                    //this.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS)
-                }
-            }.lparams(Gravity.END or Gravity.CENTER_VERTICAL)
+            actionMenuView().lparams(Gravity.END or Gravity.CENTER_VERTICAL)
         }
-        addView(toolbar) {}.lparams(matchParent, wrapContent)
 
         tabLayout {
             setUpWithVCTabs(tabs, {}, {})
         }.lparams(matchParent, wrapContent)
+
         viewContainer(tabs).lparams(matchParent, 0, 1f)
     }
 

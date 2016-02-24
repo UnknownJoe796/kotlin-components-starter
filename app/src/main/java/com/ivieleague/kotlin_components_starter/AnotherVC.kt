@@ -9,6 +9,9 @@ import com.lightningkite.kotlincomponents.addView
 import com.lightningkite.kotlincomponents.viewcontroller.AutocleanViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
 import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
+import org.jetbrains.anko.alert
+import org.jetbrains.anko.button
+import org.jetbrains.anko.onClick
 
 /**
  * Created as a dummy VC to test out the stack.
@@ -22,6 +25,15 @@ class AnotherVC(val stack: VCStack) : AutocleanViewController() {
 
             addView<TextView>() {
                 text = "Something else"
+            }
+
+            button("asdf") {
+                onClick {
+                    activity.alert("This is a test message.", "Test Message") {
+                        positiveButton("Yes") {}
+                        negativeButton("no") { }
+                    }.show()
+                }
             }
 
             addView<Button>() {

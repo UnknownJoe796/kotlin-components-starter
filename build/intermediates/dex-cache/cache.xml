@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
-
-    <item
-        jar="C:\Users\josep\Documents\GitHub\kotlin-components-starter\app\build\intermediates\exploded-aar\kotlin-components-starter\kotlin-components\unspecified\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="49054d1b2a12b0695e2bde17b162baa0aae8890d">
-        <dex dex="C:\Users\josep\Documents\GitHub\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-components-starter-kotlin-components-unspecified_19c7960affb7fba7c4a82703ba3ab86c7ba0c72c.jar" />
-    </item>
-
-</items>
+<items version="2" />
