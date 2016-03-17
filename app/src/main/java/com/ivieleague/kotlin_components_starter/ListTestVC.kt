@@ -17,10 +17,10 @@ import com.lightningkite.kotlincomponents.ui.horizontalDivider
 import com.lightningkite.kotlincomponents.ui.snackbar
 import com.lightningkite.kotlincomponents.ui.stickyHeaders
 import com.lightningkite.kotlincomponents.ui.verticalRecyclerView
+import com.lightningkite.kotlincomponents.verticalLayout
 import com.lightningkite.kotlincomponents.viewcontroller.StandardViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
 import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
-import com.lightningkite.kotlincomponents.viewcontroller.verticalLayout
 import org.jetbrains.anko.*
 
 /**

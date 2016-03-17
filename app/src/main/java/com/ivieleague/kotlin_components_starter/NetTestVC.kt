@@ -6,9 +6,10 @@ import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
-import com.lightningkite.kotlincomponents.animation.animateHeightUpdate
+import com.lightningkite.kotlincomponents.animation.makeHeightAnimator
 import com.lightningkite.kotlincomponents.animation.transitionView
 import com.lightningkite.kotlincomponents.image.getImageFromGallery
+import com.lightningkite.kotlincomponents.linearLayout
 import com.lightningkite.kotlincomponents.logging.logE
 import com.lightningkite.kotlincomponents.networking.Networking
 import com.lightningkite.kotlincomponents.observable.KObservable
@@ -17,17 +18,17 @@ import com.lightningkite.kotlincomponents.observable.bindString
 import com.lightningkite.kotlincomponents.random
 import com.lightningkite.kotlincomponents.ui.inputDialog
 import com.lightningkite.kotlincomponents.ui.progressButton
+import com.lightningkite.kotlincomponents.viewcontroller.MainViewController
 import com.lightningkite.kotlincomponents.viewcontroller.StandardViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
 import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
-import com.lightningkite.kotlincomponents.viewcontroller.linearLayout
 import org.jetbrains.anko.*
 
 /**
  * A ViewController with various tests on it.
  * Created by josep on 11/6/2015.
  */
-class NetTestVC(val stack: VCStack) : StandardViewController() {
+class NetTestVC(val main: MainViewController, val stack: VCStack) : StandardViewController() {
 
     override fun getTitle(resources: Resources): String = "Net Test"
 
@@ -48,6 +49,14 @@ class NetTestVC(val stack: VCStack) : StandardViewController() {
     override fun makeView(activity: VCActivity): View = linearLayout(activity) {
         orientation = LinearLayout.VERTICAL
         setGravity(Gravity.CENTER)
+
+        main.actionMenu?.menu?.item("delete", android.R.drawable.ic_delete) {
+            setOnMenuItemClickListener {
+                println("delete")
+                image = null
+                true
+            }
+        }
 
         textView("Hello World") {
             gravity = Gravity.CENTER
@@ -109,6 +118,8 @@ class NetTestVC(val stack: VCStack) : StandardViewController() {
         }
         transitionView {
 
+            val update = makeHeightAnimator(300, 0f)
+
             textView("Loading...") {
                 gravity = Gravity.CENTER
             }.tag("loading")
@@ -118,12 +129,15 @@ class NetTestVC(val stack: VCStack) : StandardViewController() {
             }.tag("none")
 
             imageView() {
-                val update = animateHeightUpdate(300, 0f)
                 scaleType = ImageView.ScaleType.CENTER_CROP
                 bind(imageObs) {
-                    if (it == null) return@bind
+                    if (it == null) {
+                        imageBitmap = null
+                        update(null)
+                        return@bind
+                    }
                     imageBitmap = it
-                    update()
+                    update(null)
                 }
             }.tag("image")
 
