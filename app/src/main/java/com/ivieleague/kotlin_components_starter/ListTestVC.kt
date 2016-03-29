@@ -6,7 +6,7 @@ import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.View
 import android.widget.TextView
-import com.lightningkite.kotlincomponents.adapter.ActionItemTouchHelperListener
+import com.lightningkite.kotlincomponents.adapter.SwipeActionListener
 import com.lightningkite.kotlincomponents.adapter.makeAdapter
 import com.lightningkite.kotlincomponents.adapter.swipe
 import com.lightningkite.kotlincomponents.observable.KObservableList
@@ -38,7 +38,7 @@ class ListTestVC(val stack: VCStack) : StandardViewController() {
 
         verticalRecyclerView() {
 
-            val adap = makeAdapter(items) { obs ->
+            val adap = makeAdapter(items, "") { obs ->
                 TextView(activity).apply {
                     bindString(obs)
                     gravity = Gravity.CENTER
@@ -67,7 +67,7 @@ class ListTestVC(val stack: VCStack) : StandardViewController() {
             })
 
             swipe(
-                    ActionItemTouchHelperListener.SwipeAction(
+                    SwipeActionListener.SwipeAction(
                             Color.RED,
                             resources.getDrawable(android.R.drawable.ic_menu_delete),
                             { true },
@@ -80,7 +80,7 @@ class ListTestVC(val stack: VCStack) : StandardViewController() {
                                 }
                             }
                     ),
-                    ActionItemTouchHelperListener.SwipeAction(
+                    SwipeActionListener.SwipeAction(
                             Color.RED,
                             resources.getDrawable(android.R.drawable.ic_menu_delete),
                             { true },

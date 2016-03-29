@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import com.lightningkite.kotlincomponents.animation.makeHeightAnimator
 import com.lightningkite.kotlincomponents.animation.transitionView
+import com.lightningkite.kotlincomponents.async.doAsync
 import com.lightningkite.kotlincomponents.image.getImageFromGallery
 import com.lightningkite.kotlincomponents.linearLayout
 import com.lightningkite.kotlincomponents.logging.logE
@@ -105,15 +106,16 @@ class NetTestVC(val main: MainViewController, val stack: VCStack) : StandardView
             onClick {
                 running = true
                 loading = true
-                Networking.get("http://lorempixel.com/${(200..600).random()}/${(200..600).random()}") {
+                val url = "http://lorempixel.com/${(200..600).random()}/${(200..600).random()}"
+                doAsync({ Networking.syncGet(url).bitmap() }) {
+                    image = it
                     running = false
                     loading = false
-                    if (it.isSuccessful) {
-                        image = it.bitmap()
-                    } else {
-                        image = null
-                    }
                 }
+                /*
+                * Networking.do{ get(url).bitmap() }.later{
+                * }
+                * */
             }
         }
         transitionView {
