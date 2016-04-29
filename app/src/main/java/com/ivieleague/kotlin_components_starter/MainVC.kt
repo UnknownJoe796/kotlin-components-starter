@@ -1,7 +1,7 @@
 package com.ivieleague.kotlin_components_starter
 
 import android.view.View
-import android.view.ViewManager
+import android.view.ViewGroup
 import com.lightningkite.kotlincomponents.ui.setUpWithVCTabs
 import com.lightningkite.kotlincomponents.viewcontroller.MainViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
@@ -15,11 +15,11 @@ import org.jetbrains.anko.wrapContent
 /**
  * Created by jivie on 2/11/16.
  */
-class MainVC(val stack: VCStack) : MainViewController(R.drawable.abc_ic_ab_back_material, {}) {
+class MainVC(val stack: VCStack) : MainViewController(R.drawable.abc_ic_ab_back_mtrl_am_alpha, {}) {
 
     val tabs = VCTabs(0, NetTestVC(this, stack), ListTestVC(stack), SocketIOVC(stack))
 
-    override fun ViewManager.makeSubview(activity: VCActivity): View {
+    override fun ViewGroup.makeSubview(activity: VCActivity): View {
 
         attach(activity, tabs)
 

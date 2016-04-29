@@ -12,6 +12,7 @@ import com.lightningkite.kotlincomponents.image.getImageFromGallery
 import com.lightningkite.kotlincomponents.linearLayout
 import com.lightningkite.kotlincomponents.logging.logE
 import com.lightningkite.kotlincomponents.networking.Networking
+import com.lightningkite.kotlincomponents.networking.get
 import com.lightningkite.kotlincomponents.observable.KObservable
 import com.lightningkite.kotlincomponents.observable.bind
 import com.lightningkite.kotlincomponents.observable.bindString
