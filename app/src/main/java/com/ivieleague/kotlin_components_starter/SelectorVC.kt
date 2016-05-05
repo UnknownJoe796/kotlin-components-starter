@@ -47,7 +47,7 @@ class SelectorVC(val main: MainVC) : AnkoViewController() {
                     onClick {
                         main.stack.push(itemObs.get().second())
                     }
-                }
+                }.lparams(matchParent, wrapContent)
             }
         }
     }
