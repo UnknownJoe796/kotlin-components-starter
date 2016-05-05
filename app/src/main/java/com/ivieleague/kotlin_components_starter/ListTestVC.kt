@@ -24,7 +24,7 @@ import org.jetbrains.anko.*
  */
 class ListTestVC(val stack: VCStack) : AnkoViewController() {
 
-    val items = KObservableList(arrayListOf<String>())
+    val items = KObservableList(arrayListOf<String>("A", "B", "C"))
 
     override fun getTitle(resources: Resources): String = "List Test"
 
@@ -50,7 +50,7 @@ class ListTestVC(val stack: VCStack) : AnkoViewController() {
             stickyHeaders(adap, {
                 when (it.toFloatMaybe()) {
                     null -> "Not a Number"
-                    in 0f..5f -> "Low"
+                    in 0f..(.5f) -> "Low"
                     else -> "High"
                 }
             }, {
