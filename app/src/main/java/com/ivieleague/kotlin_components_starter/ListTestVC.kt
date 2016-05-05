@@ -5,8 +5,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.View
-import android.widget.TextView
-import com.lightningkite.kotlincomponents.adapter.makeAdapter
+import com.lightningkite.kotlincomponents.adapter.adapter
 import com.lightningkite.kotlincomponents.adapter.swipeToDismiss
 import com.lightningkite.kotlincomponents.observable.KObservableList
 import com.lightningkite.kotlincomponents.observable.bindString
@@ -15,8 +14,7 @@ import com.lightningkite.kotlincomponents.toFloatMaybe
 import com.lightningkite.kotlincomponents.ui.horizontalDivider
 import com.lightningkite.kotlincomponents.ui.stickyHeaders
 import com.lightningkite.kotlincomponents.ui.verticalRecyclerView
-import com.lightningkite.kotlincomponents.verticalLayout
-import com.lightningkite.kotlincomponents.viewcontroller.StandardViewController
+import com.lightningkite.kotlincomponents.viewcontroller.AnkoViewController
 import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
 import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
 import org.jetbrains.anko.*
@@ -24,20 +22,19 @@ import org.jetbrains.anko.*
 /**
  * Created by jivie on 2/10/16.
  */
-class ListTestVC(val stack: VCStack) : StandardViewController() {
+class ListTestVC(val stack: VCStack) : AnkoViewController() {
 
-    val items = KObservableList(arrayListOf("first", "second", "third", "fourth", "fifth"))
+    val items = KObservableList(arrayListOf<String>())
 
     override fun getTitle(resources: Resources): String = "List Test"
 
-    override fun makeView(activity: VCActivity): View = verticalLayout(activity) {
-
+    override fun createView(ui: AnkoContext<VCActivity>): View = ui.verticalLayout {
         gravity = Gravity.CENTER
 
         verticalRecyclerView() {
 
-            val adap = makeAdapter(items, "") { obs ->
-                TextView(activity).apply {
+            val adap = adapter(items) { obs ->
+                textView() {
                     bindString(obs)
                     gravity = Gravity.CENTER
                     textSize = 18f
@@ -51,13 +48,13 @@ class ListTestVC(val stack: VCStack) : StandardViewController() {
             }
 
             stickyHeaders(adap, {
-                when(it.toFloatMaybe()){
+                when (it.toFloatMaybe()) {
                     null -> "Not a Number"
-                    in 0f .. .5f -> "Low"
+                    in 0f..5f -> "Low"
                     else -> "High"
                 }
             }, {
-                TextView(context).apply{
+                textView {
                     text = it
                     backgroundColor = resources.getColor(R.color.colorPrimary)
                     padding = dip(8)
