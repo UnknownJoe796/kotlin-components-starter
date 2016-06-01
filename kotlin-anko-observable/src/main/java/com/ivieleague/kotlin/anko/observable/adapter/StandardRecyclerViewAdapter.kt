@@ -169,12 +169,6 @@ inline fun <T> RecyclerView.standardAdapter(
     return newAdapter
 }
 
-@Deprecated("Use standardAdapter() instead.", ReplaceWith("standardAdapter(list, makeView)", "com.lightningkite.kotlincomponents.adapter.standardAdapter"))
-inline fun <T> RecyclerView.adapterObservable(
-        listObs: ObservableProperty<List<T>>,
-        noinline makeView: StandardRecyclerViewAdapter.SRVAContext<T>.(StandardRecyclerViewAdapter.ItemObservable<T>) -> Unit
-): StandardRecyclerViewAdapter<T> = standardAdapterObservable(listObs, makeView)
-
 inline fun <T> RecyclerView.standardAdapterObservable(
         listObs: ObservableProperty<List<T>>,
         noinline makeView: StandardRecyclerViewAdapter.SRVAContext<T>.(StandardRecyclerViewAdapter.ItemObservable<T>) -> Unit

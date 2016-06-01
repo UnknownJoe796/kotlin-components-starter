@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/kotlin-anko-observable" />
             <option value="$PROJECT_DIR$/kotlin-components" />
             <option value="$PROJECT_DIR$/kotlin-core" />
+            <option value="$PROJECT_DIR$/kotlin-networking" />
             <option value="$PROJECT_DIR$/kotlin-observable" />
           </set>
         </option>
@@ -26,6 +27,7 @@
             <option value="$PROJECT_DIR$/kotlin-anko-observable" />
             <option value="$PROJECT_DIR$/kotlin-components" />
             <option value="$PROJECT_DIR$/kotlin-core" />
+            <option value="$PROJECT_DIR$/kotlin-networking" />
             <option value="$PROJECT_DIR$/kotlin-observable" />
           </set>
         </option>
