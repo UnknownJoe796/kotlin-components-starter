@@ -1,1 +1,1 @@
-include ':app', ':kotlin-components', ':kotlin-observable', ':kotlin-core', ':kotlin-anko'
+include ':app', ':kotlin-components', ':kotlin-observable', ':kotlin-core', ':kotlin-anko', ':kotlin-anko-observable'
