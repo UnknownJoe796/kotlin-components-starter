@@ -7,6 +7,7 @@
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-junit/1.0.2/39cc23a80073d841bb671a20aba8f5e224ef594f/kotlin-test-junit-1.0.2-sources.jar!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-junit/1.0.2/39cc23a80073d841bb671a20aba8f5e224ef594f/kotlin-test-junit-1.0.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test-junit/1.0.2/39cc23a80073d841bb671a20aba8f5e224ef594f/kotlin-test-junit-1.0.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
