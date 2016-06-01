@@ -1,23 +1,67 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        warning('InvalidPackage', 'NewApi')
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
+    jcenter()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'org.jetbrains.anko:anko-sdk15:0.8.3'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'org.jetbrains.anko:anko-appcompat-v7:0.8.3'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'org.jetbrains.anko:anko-cardview-v7:0.8.3'
+    compile 'com.android.support:gridlayout-v7:23.4.0'
+    compile 'org.jetbrains.anko:anko-gridlayout-v7:0.8.3'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'org.jetbrains.anko:anko-recyclerview-v7:0.8.3'
+    compile 'com.android.support:design:23.4.0'
+    compile 'org.jetbrains.anko:anko-design:0.8.3'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.github.salomonbrys.kotson:kotson:2.1.0'
+}
+
 buildscript {
     ext.kotlin_version = '1.0.2'
     repositories {
         mavenCentral()
     }
     dependencies {
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.3.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
-
-apply plugin: 'kotlin'
-
-defaultTasks 'run'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    testCompile 'junit:junit:4.11'
-    testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
-}
+apply plugin: 'com.getkeepsafe.dexcount'

@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-anko/anko-plus.iml" filepath="$PROJECT_DIR$/kotlin-anko/anko-plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin-anko/kotlin-anko.iml" filepath="$PROJECT_DIR$/kotlin-anko/kotlin-anko.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-components/kotlin-components.iml" filepath="$PROJECT_DIR$/kotlin-components/kotlin-components.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-components-starter.iml" filepath="$PROJECT_DIR$/kotlin-components-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-core/kotlin-core.iml" filepath="$PROJECT_DIR$/kotlin-core/kotlin-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin-core/kotlin-core.iml" filepath="$PROJECT_DIR$/kotlin-core/kotlin-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin-observable/kotlin-observable.iml" filepath="$PROJECT_DIR$/kotlin-observable/kotlin-observable.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-observable/kotlin-observable.iml" filepath="$PROJECT_DIR$/kotlin-observable/kotlin-observable.iml" />
     </modules>
   </component>

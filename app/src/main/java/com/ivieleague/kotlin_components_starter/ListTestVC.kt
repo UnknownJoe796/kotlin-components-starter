@@ -47,7 +47,7 @@ class ListTestVC(val stack: VCStack) : AnkoViewController() {
                 }.lparams(matchParent, wrapContent)
             }
 
-            stickyHeaders(adap, {
+            stickyHeaders(adap.list, {
                 when (it.toFloatMaybe()) {
                     null -> "Not a Number"
                     in 0f..(.5f) -> "Low"

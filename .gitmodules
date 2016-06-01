@@ -1,3 +1,12 @@
 [submodule "kotlin-components"]
 	path = kotlin-components
 	url = https://github.com/lightningkite/kotlin-components.git
+[submodule "kotlin-observable"]
+	path = kotlin-observable
+	url = https://github.com/UnknownJoe796/kotlin-observable.git
+[submodule "kotlin-base"]
+	path = kotlin-base
+	url = https://github.com/UnknownJoe796/kotlin-base.git
+[submodule "kotlin-core"]
+	path = kotlin-core
+	url = https://github.com/UnknownJoe796/kotlin-core.git
