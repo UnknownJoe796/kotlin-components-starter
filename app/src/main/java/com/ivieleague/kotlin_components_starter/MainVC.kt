@@ -2,9 +2,9 @@ package com.ivieleague.kotlin_components_starter
 
 import android.view.View
 import android.view.ViewGroup
-import com.lightningkite.kotlincomponents.viewcontroller.MainViewController
-import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
-import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
+import com.ivieleague.kotlin.anko.viewcontrollers.MainViewController
+import com.ivieleague.kotlin.anko.viewcontrollers.containers.VCStack
+import com.ivieleague.kotlin.anko.viewcontrollers.implementations.VCActivity
 
 /**
  * Created by jivie on 2/11/16.

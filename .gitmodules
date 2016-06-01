@@ -1,3 +1,24 @@
 [submodule "kotlin-components"]
 	path = kotlin-components
 	url = https://github.com/lightningkite/kotlin-components.git
+[submodule "kotlin-anko-view-controllers"]
+	path = kotlin-anko-view-controllers
+	url = https://github.com/UnknownJoe796/kotlin-anko-view-controllers.git
+[submodule "kotlin-anko"]
+	path = kotlin-anko
+	url = https://github.com/UnknownJoe796/kotlin-anko.git
+[submodule "kotlin-anko-networking"]
+	path = kotlin-anko-networking
+	url = https://github.com/UnknownJoe796/kotlin-anko-networking.git
+[submodule "kotlin-observable"]
+	path = kotlin-observable
+	url = https://github.com/UnknownJoe796/kotlin-observable.git
+[submodule "kotlin-networking"]
+	path = kotlin-networking
+	url = https://github.com/UnknownJoe796/kotlin-networking.git
+[submodule "kotlin-core"]
+	path = kotlin-core
+	url = https://github.com/UnknownJoe796/kotlin-core.git
+[submodule "kotlin-anko-observable"]
+	path = kotlin-anko-observable
+	url = https://github.com/UnknownJoe796/kotlin-anko-observable.git

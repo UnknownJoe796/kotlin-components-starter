@@ -2,56 +2,58 @@ package com.ivieleague.kotlin_components_starter
 
 import android.content.res.Resources
 import android.graphics.Bitmap
+import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
-import com.lightningkite.kotlincomponents.animation.makeHeightAnimator
-import com.lightningkite.kotlincomponents.animation.transitionView
-import com.lightningkite.kotlincomponents.image.getImageFromGallery
-import com.lightningkite.kotlincomponents.linearLayout
-import com.lightningkite.kotlincomponents.logging.logE
-import com.lightningkite.kotlincomponents.networking.Networking
-import com.lightningkite.kotlincomponents.networking.get
-import com.lightningkite.kotlincomponents.observable.KObservable
-import com.lightningkite.kotlincomponents.observable.bind
-import com.lightningkite.kotlincomponents.observable.bindString
-import com.lightningkite.kotlincomponents.random
-import com.lightningkite.kotlincomponents.ui.inputDialog
-import com.lightningkite.kotlincomponents.ui.progressButton
-import com.lightningkite.kotlincomponents.viewcontroller.MainViewController
-import com.lightningkite.kotlincomponents.viewcontroller.StandardViewController
-import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
-import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
+import com.ivieleague.kotlin.anko.animation.makeHeightAnimator
+import com.ivieleague.kotlin.anko.animation.transitionView
+import com.ivieleague.kotlin.anko.networking.image.bitmap
+import com.ivieleague.kotlin.anko.observable.bindString
+import com.ivieleague.kotlin.anko.progressButton
+import com.ivieleague.kotlin.anko.viewcontrollers.AnkoViewController
+import com.ivieleague.kotlin.anko.viewcontrollers.MainViewController
+import com.ivieleague.kotlin.anko.viewcontrollers.containers.VCStack
+import com.ivieleague.kotlin.anko.viewcontrollers.dialogs.inputDialog
+import com.ivieleague.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.ivieleague.kotlin.networking.NetMethod
+import com.ivieleague.kotlin.networking.NetRequest
+import com.ivieleague.kotlin.networking.Networking
+import com.ivieleague.kotlin.networking.async
+import com.ivieleague.kotlin.observable.property.StandardObservableProperty
+import com.ivieleague.kotlin.observable.property.bind
+import com.ivieleague.kotlin.range.random
 import org.jetbrains.anko.*
 
 /**
  * A ViewController with various tests on it.
  * Created by josep on 11/6/2015.
  */
-class NetTestVC(val main: MainViewController, val stack: VCStack) : StandardViewController() {
+class NetTestVC(val main: MainViewController, val stack: VCStack) : AnkoViewController() {
 
     override fun getTitle(resources: Resources): String = "Net Test"
 
-    val imageObs: KObservable<Bitmap?> = object : KObservable<Bitmap?>(null) {
-        override fun set(v: Bitmap?) {
-            this.value?.recycle()
-            super.set(v)
-        }
+    val imageObs: StandardObservableProperty<Bitmap?> = object : StandardObservableProperty<Bitmap?>(null) {
+        override var value: Bitmap?
+            get() = super.value
+            set(value) {
+                this.value?.recycle()
+                super.value = value
+            }
     }
     var image: Bitmap? by imageObs
 
-    val loadingObs: KObservable<Boolean> = KObservable(false)
+    val loadingObs: StandardObservableProperty<Boolean> = StandardObservableProperty(false)
     var loading: Boolean by loadingObs
 
-    val textObs = KObservable("Start Text")
+    val textObs = StandardObservableProperty("Start Text")
     var text by textObs
-
-    override fun makeView(activity: VCActivity): View = linearLayout(activity) {
+    override fun createView(ui: AnkoContext<VCActivity>): View = ui.linearLayout {
         orientation = LinearLayout.VERTICAL
         setGravity(Gravity.CENTER)
 
-        main.actionMenu?.menu?.item("delete", android.R.drawable.ic_delete) {
+        main.actionMenu?.menu?.item(R.string.app_name, android.R.drawable.ic_delete) {
             setOnMenuItemClickListener {
                 println("delete")
                 image = null
@@ -71,30 +73,30 @@ class NetTestVC(val main: MainViewController, val stack: VCStack) : StandardView
             bindString(textObs)
         }
 
-        button("Get an Image") {
-            onClick {
-                activity.getImageFromGallery(1000) {
-                    image = it
-                }
-            }
-        }
+//        button("Get an Image") {
+//            onClick {
+//                ui.owner.getImageFromGallery(1000) {
+//                    image = it
+//                }
+//            }
+//        }
 
         progressButton("Enter an image URL") {
             onClick {
-                activity.inputDialog("Enter an image URL", "URL") { url ->
+                ui.owner.inputDialog("Enter an image URL", "URL", "") { url ->
                     if (url != null) {
                         running = true
                         loading = true
-                        Networking.get(url) {
+                        Networking.async(NetRequest(NetMethod.GET, url)) {
                             running = false
                             loading = false
                             if (it.isSuccessful) {
                                 image = it.bitmap()
                             } else {
                                 image = null
-                                logE(url)
-                                logE(it.code)
-                                logE(it.string())
+                                Log.e("NetTestVC", url)
+                                Log.e("NetTestVC", it.code.toString())
+                                Log.e("NetTestVC", it.string())
                             }
                         }
                     }
@@ -106,7 +108,7 @@ class NetTestVC(val main: MainViewController, val stack: VCStack) : StandardView
             onClick {
                 running = true
                 loading = true
-                Networking.get("http://lorempixel.com/${(200..600).random()}/${(200..600).random()}") {
+                Networking.async(NetRequest(NetMethod.GET, "http://lorempixel.com/${(200..600).random()}/${(200..600).random()}")) {
                     running = false
                     loading = false
                     if (it.isSuccessful) {
@@ -117,6 +119,7 @@ class NetTestVC(val main: MainViewController, val stack: VCStack) : StandardView
                 }
             }
         }
+
         transitionView {
 
             val update = makeHeightAnimator(300, 0f)
@@ -131,7 +134,7 @@ class NetTestVC(val main: MainViewController, val stack: VCStack) : StandardView
 
             imageView() {
                 scaleType = ImageView.ScaleType.CENTER_CROP
-                bind(imageObs) {
+                lifecycle.bind(imageObs) {
                     if (it == null) {
                         imageBitmap = null
                         update(null)
@@ -142,12 +145,12 @@ class NetTestVC(val main: MainViewController, val stack: VCStack) : StandardView
                 }
             }.tag("image")
 
-            bind(loadingObs) {
+            lifecycle.bind(loadingObs) {
                 if (it) {
                     animate("loading")
                 }
             }
-            bind(imageObs) {
+            lifecycle.bind(imageObs) {
                 if (it == null) {
                     animate("none")
                 } else {
@@ -156,11 +159,6 @@ class NetTestVC(val main: MainViewController, val stack: VCStack) : StandardView
             }
         }
 
-        button("Test Socket IO") {
-            onClick {
-                stack.push(SocketIOVC(stack))
-            }
-        }
 
         button("Test List") {
             onClick {

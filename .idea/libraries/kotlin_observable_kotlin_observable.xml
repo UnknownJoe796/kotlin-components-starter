@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="kotlin-observable.kotlin-observable">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/kotlin-observable/build/libs/kotlin-observable.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

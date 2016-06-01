@@ -1,8 +1,8 @@
 package com.ivieleague.kotlin_components_starter
 
 import android.os.Bundle
-import com.lightningkite.kotlincomponents.viewcontroller.containers.VCSwapper
-import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
+import com.ivieleague.kotlin.anko.viewcontrollers.containers.VCSwapper
+import com.ivieleague.kotlin.anko.viewcontrollers.implementations.VCActivity
 
 class MainActivity : VCActivity() {
 
