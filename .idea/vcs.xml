@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/kotlin-anko" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/kotlin-anko-networking" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/kotlin-components" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/kotlin-core" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/kotlin-networking" vcs="Git" />
