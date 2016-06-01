@@ -5,18 +5,18 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.View
-import com.lightningkite.kotlincomponents.adapter.adapter
-import com.lightningkite.kotlincomponents.adapter.swipeToDismiss
-import com.lightningkite.kotlincomponents.observable.KObservableList
-import com.lightningkite.kotlincomponents.observable.bindString
-import com.lightningkite.kotlincomponents.selectableItemBackgroundResource
-import com.lightningkite.kotlincomponents.toFloatMaybe
-import com.lightningkite.kotlincomponents.ui.horizontalDivider
-import com.lightningkite.kotlincomponents.ui.stickyHeaders
-import com.lightningkite.kotlincomponents.ui.verticalRecyclerView
-import com.lightningkite.kotlincomponents.viewcontroller.AnkoViewController
-import com.lightningkite.kotlincomponents.viewcontroller.containers.VCStack
-import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
+import com.ivieleague.kotlin.anko.adapter.swipeToDismiss
+import com.ivieleague.kotlin.anko.horizontalDivider
+import com.ivieleague.kotlin.anko.observable.adapter.standardAdapter
+import com.ivieleague.kotlin.anko.observable.bindString
+import com.ivieleague.kotlin.anko.selectableItemBackgroundResource
+import com.ivieleague.kotlin.anko.stickyHeaders
+import com.ivieleague.kotlin.anko.verticalRecyclerView
+import com.ivieleague.kotlin.anko.viewcontrollers.AnkoViewController
+import com.ivieleague.kotlin.anko.viewcontrollers.containers.VCStack
+import com.ivieleague.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.ivieleague.kotlin.observable.list.ObservableListWrapper
+import com.ivieleague.kotlin.text.toFloatMaybe
 import org.jetbrains.anko.*
 
 /**
@@ -24,7 +24,7 @@ import org.jetbrains.anko.*
  */
 class ListTestVC(val stack: VCStack) : AnkoViewController() {
 
-    val items = KObservableList(arrayListOf<String>("A", "B", "C"))
+    val items = ObservableListWrapper(arrayListOf<String>("A", "B", "C"))
 
     override fun getTitle(resources: Resources): String = "List Test"
 
@@ -33,7 +33,7 @@ class ListTestVC(val stack: VCStack) : AnkoViewController() {
 
         verticalRecyclerView() {
 
-            val adap = adapter(items) { obs ->
+            val adap = standardAdapter(items) { obs ->
                 textView() {
                     bindString(obs)
                     gravity = Gravity.CENTER

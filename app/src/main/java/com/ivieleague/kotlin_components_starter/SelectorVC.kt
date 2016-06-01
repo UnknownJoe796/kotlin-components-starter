@@ -3,13 +3,14 @@ package com.ivieleague.kotlin_components_starter
 import android.content.res.Resources
 import android.view.Gravity
 import android.view.View
-import com.lightningkite.kotlincomponents.adapter.adapter
-import com.lightningkite.kotlincomponents.observable.bind
-import com.lightningkite.kotlincomponents.selectableItemBackgroundResource
-import com.lightningkite.kotlincomponents.ui.verticalRecyclerView
-import com.lightningkite.kotlincomponents.viewcontroller.AnkoViewController
-import com.lightningkite.kotlincomponents.viewcontroller.ViewController
-import com.lightningkite.kotlincomponents.viewcontroller.implementations.VCActivity
+import com.ivieleague.kotlin.anko.observable.adapter.standardAdapter
+import com.ivieleague.kotlin.anko.observable.lifecycle
+import com.ivieleague.kotlin.anko.selectableItemBackgroundResource
+import com.ivieleague.kotlin.anko.verticalRecyclerView
+import com.ivieleague.kotlin.anko.viewcontrollers.AnkoViewController
+import com.ivieleague.kotlin.anko.viewcontrollers.ViewController
+import com.ivieleague.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.ivieleague.kotlin.observable.property.bind
 import org.jetbrains.anko.*
 import java.util.*
 
@@ -36,16 +37,16 @@ class SelectorVC(val main: MainVC) : AnkoViewController() {
         }
 
         verticalRecyclerView() {
-            adapter(demos) { itemObs ->
+            standardAdapter(demos) { itemObs ->
                 textView() {
                     minimumHeight = dip(48)
                     padding = dip(16)
                     backgroundResource = selectableItemBackgroundResource
-                    bind(itemObs) {
+                    lifecycle.bind(itemObs) {
                         text = it.first
                     }
                     onClick {
-                        main.stack.push(itemObs.get().second())
+                        main.stack.push(itemObs.value.second())
                     }
                 }.lparams(matchParent, wrapContent)
             }

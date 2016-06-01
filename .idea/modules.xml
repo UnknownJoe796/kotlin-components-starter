@@ -11,9 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/kotlin-components/kotlin-components.iml" filepath="$PROJECT_DIR$/kotlin-components/kotlin-components.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-components-starter.iml" filepath="$PROJECT_DIR$/kotlin-components-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-core/kotlin-core.iml" filepath="$PROJECT_DIR$/kotlin-core/kotlin-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kotlin-core/kotlin-core.iml" filepath="$PROJECT_DIR$/kotlin-core/kotlin-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-networking/kotlin-networking.iml" filepath="$PROJECT_DIR$/kotlin-networking/kotlin-networking.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kotlin-observable/kotlin-observable.iml" filepath="$PROJECT_DIR$/kotlin-observable/kotlin-observable.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-observable/kotlin-observable.iml" filepath="$PROJECT_DIR$/kotlin-observable/kotlin-observable.iml" />
     </modules>
   </component>
