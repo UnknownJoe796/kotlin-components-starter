@@ -12,9 +12,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/kotlin-anko" />
+            <option value="$PROJECT_DIR$/kotlin-anko-full" />
             <option value="$PROJECT_DIR$/kotlin-anko-networking" />
             <option value="$PROJECT_DIR$/kotlin-anko-observable" />
             <option value="$PROJECT_DIR$/kotlin-anko-view-controllers" />
+            <option value="$PROJECT_DIR$/kotlin-components" />
             <option value="$PROJECT_DIR$/kotlin-core" />
             <option value="$PROJECT_DIR$/kotlin-networking" />
             <option value="$PROJECT_DIR$/kotlin-observable" />
@@ -25,9 +27,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/kotlin-anko" />
+            <option value="$PROJECT_DIR$/kotlin-anko-full" />
             <option value="$PROJECT_DIR$/kotlin-anko-networking" />
             <option value="$PROJECT_DIR$/kotlin-anko-observable" />
             <option value="$PROJECT_DIR$/kotlin-anko-view-controllers" />
+            <option value="$PROJECT_DIR$/kotlin-components" />
             <option value="$PROJECT_DIR$/kotlin-core" />
             <option value="$PROJECT_DIR$/kotlin-networking" />
             <option value="$PROJECT_DIR$/kotlin-observable" />

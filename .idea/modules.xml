@@ -4,9 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-anko/kotlin-anko.iml" filepath="$PROJECT_DIR$/kotlin-anko/kotlin-anko.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin-anko-full/kotlin-anko-full.iml" filepath="$PROJECT_DIR$/kotlin-anko-full/kotlin-anko-full.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-anko-networking/kotlin-anko-networking.iml" filepath="$PROJECT_DIR$/kotlin-anko-networking/kotlin-anko-networking.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-anko-observable/kotlin-anko-observable.iml" filepath="$PROJECT_DIR$/kotlin-anko-observable/kotlin-anko-observable.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-anko-view-controllers/kotlin-anko-view-controllers.iml" filepath="$PROJECT_DIR$/kotlin-anko-view-controllers/kotlin-anko-view-controllers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin-components/kotlin-components.iml" filepath="$PROJECT_DIR$/kotlin-components/kotlin-components.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-components-starter.iml" filepath="$PROJECT_DIR$/kotlin-components-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-core/kotlin-core.iml" filepath="$PROJECT_DIR$/kotlin-core/kotlin-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin-networking/kotlin-networking.iml" filepath="$PROJECT_DIR$/kotlin-networking/kotlin-networking.iml" />

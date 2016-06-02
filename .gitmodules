@@ -22,3 +22,6 @@
 [submodule "kotlin-anko-observable"]
 	path = kotlin-anko-observable
 	url = https://github.com/UnknownJoe796/kotlin-anko-observable.git
+[submodule "kotlin-anko-full"]
+	path = kotlin-anko-full
+	url = https://github.com/UnknownJoe796/kotlin-anko-full.git
