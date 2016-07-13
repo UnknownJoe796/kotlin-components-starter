@@ -11,12 +11,14 @@ import com.ivieleague.kotlin.anko.animation.makeHeightAnimator
 import com.ivieleague.kotlin.anko.animation.transitionView
 import com.ivieleague.kotlin.anko.networking.image.bitmap
 import com.ivieleague.kotlin.anko.observable.bindString
+import com.ivieleague.kotlin.anko.observable.lifecycle
 import com.ivieleague.kotlin.anko.progressButton
 import com.ivieleague.kotlin.anko.viewcontrollers.AnkoViewController
 import com.ivieleague.kotlin.anko.viewcontrollers.MainViewController
 import com.ivieleague.kotlin.anko.viewcontrollers.containers.VCStack
 import com.ivieleague.kotlin.anko.viewcontrollers.dialogs.inputDialog
 import com.ivieleague.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.ivieleague.kotlin.lifecycle.listen
 import com.ivieleague.kotlin.networking.NetMethod
 import com.ivieleague.kotlin.networking.NetRequest
 import com.ivieleague.kotlin.networking.Networking
@@ -32,8 +34,15 @@ import org.jetbrains.anko.*
  */
 class NetTestVC(val main: MainViewController, val stack: VCStack) : AnkoViewController() {
 
+    //Returns the title for the app bar.
     override fun getTitle(resources: Resources): String = "Net Test"
 
+    /**
+     * An observable property is just a holder for a value that reports whenever it is changed.  It
+     * can be used as a property delegate.
+     *
+     * This one in particular references a bitmap and is overridden to recycle the old one.
+     */
     val imageObs: StandardObservableProperty<Bitmap?> = object : StandardObservableProperty<Bitmap?>(null) {
         override var value: Bitmap?
             get() = super.value
@@ -49,10 +58,13 @@ class NetTestVC(val main: MainViewController, val stack: VCStack) : AnkoViewCont
 
     val textObs = StandardObservableProperty("Start Text")
     var text by textObs
+
     override fun createView(ui: AnkoContext<VCActivity>): View = ui.linearLayout {
         orientation = LinearLayout.VERTICAL
         setGravity(Gravity.CENTER)
 
+
+        //adds an item to the menu for the duration of this ViewController.
         main.actionMenu?.menu?.item(R.string.app_name, android.R.drawable.ic_delete) {
             setOnMenuItemClickListener {
                 println("delete")
@@ -63,24 +75,47 @@ class NetTestVC(val main: MainViewController, val stack: VCStack) : AnkoViewCont
 
         textView("Hello World") {
             gravity = Gravity.CENTER
+            styleDefault() //Styles this view.  See Style.kt for more information.
         }
 
         editText() {
+            styleDefault()
+
+            //This ensures that the value of the observable and the text inside this EditText are always the same
             bindString(textObs)
         }
 
         textView() {
+            styleDefault()
+
+            //This bind is read only.
             bindString(textObs)
         }
 
-//        button("Get an Image") {
-//            onClick {
-//                ui.owner.getImageFromGallery(1000) {
-//                    image = it
-//                }
-//            }
-//        }
+        textView() {
+            styleDefault()
 
+            //This is the more manual way of binding things to a view.  We bind an observable to a callback for the duration of the view's lifecycle.
+            this.lifecycle.bind(textObs){
+                text = it
+            }
+        }
+
+        textView(){
+            styleDefault()
+
+            //To write that out even more, the full version looks like this:
+
+            //Set the initial value of the text ot the observable's value
+            text = textObs.value
+
+            //An observable is a mutable collection of lambdas.  The *listen* function simply adds an entry at the beginning of the lifecycle and removes it and the end of the lifecycle.
+            this.lifecycle.listen(textObs){
+                text = it
+            }
+        }
+
+        //A progress button is a layout that transitions between a button and progress depending on the value of [running].
         progressButton("Enter an image URL") {
             onClick {
                 ui.owner.inputDialog("Enter an image URL", "URL", "") { url ->
@@ -120,13 +155,15 @@ class NetTestVC(val main: MainViewController, val stack: VCStack) : AnkoViewCont
             }
         }
 
+        //A transition view is used to transition between multiple views, usually with a fade effect.
         transitionView {
 
-            val update = makeHeightAnimator(300, 0f)
+            //This makes a lambda that can animate height.  It is up for refactoring though, so this may change soon.
+            val animateHeight = makeHeightAnimator(300, 0f)
 
             textView("Loading...") {
                 gravity = Gravity.CENTER
-            }.tag("loading")
+            }.tag("loading") //Tags the view as "loading".  Now if animate("loading") is called, the view animates to this text view.
 
             textView("No image.") {
                 gravity = Gravity.CENTER
@@ -134,22 +171,31 @@ class NetTestVC(val main: MainViewController, val stack: VCStack) : AnkoViewCont
 
             imageView() {
                 scaleType = ImageView.ScaleType.CENTER_CROP
+
+                //This can be read as:
+                //Right now and whenever imageObs changes, do what is within the curly braces.
                 lifecycle.bind(imageObs) {
+
                     if (it == null) {
                         imageBitmap = null
-                        update(null)
+                        animateHeight(null)
                         return@bind
                     }
                     imageBitmap = it
-                    update(null)
+                    animateHeight(null)
                 }
             }.tag("image")
 
+            //This can be read as:
+            //Right now and whenever loadingObs changes, do what is within the curly braces.
             lifecycle.bind(loadingObs) {
                 if (it) {
                     animate("loading")
                 }
             }
+
+            //This can be read as:
+            //Right now and whenever imageObs changes, do what is within the curly braces.
             lifecycle.bind(imageObs) {
                 if (it == null) {
                     animate("none")
