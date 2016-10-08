@@ -3,14 +3,14 @@ package com.ivieleague.kotlin_components_starter
 import android.content.res.Resources
 import android.view.Gravity
 import android.view.View
-import com.ivieleague.kotlin.anko.observable.adapter.standardAdapter
-import com.ivieleague.kotlin.anko.observable.lifecycle
-import com.ivieleague.kotlin.anko.selectableItemBackgroundResource
-import com.ivieleague.kotlin.anko.verticalRecyclerView
-import com.ivieleague.kotlin.anko.viewcontrollers.AnkoViewController
-import com.ivieleague.kotlin.anko.viewcontrollers.ViewController
-import com.ivieleague.kotlin.anko.viewcontrollers.implementations.VCActivity
-import com.ivieleague.kotlin.observable.property.bind
+import com.lightningkite.kotlin.anko.lifecycle
+import com.lightningkite.kotlin.anko.observable.adapter.listAdapter
+import com.lightningkite.kotlin.anko.selectableItemBackgroundResource
+import com.lightningkite.kotlin.anko.verticalRecyclerView
+import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
+import com.lightningkite.kotlin.anko.viewcontrollers.ViewController
+import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.lightningkite.kotlin.observable.property.bind
 import org.jetbrains.anko.*
 import java.util.*
 
@@ -37,7 +37,7 @@ class SelectorVC(val main: MainVC) : AnkoViewController() {
         }
 
         verticalRecyclerView() {
-            standardAdapter(demos) { itemObs ->
+            adapter = listAdapter(demos) { itemObs ->
                 textView() {
                     minimumHeight = dip(48)
                     padding = dip(16)

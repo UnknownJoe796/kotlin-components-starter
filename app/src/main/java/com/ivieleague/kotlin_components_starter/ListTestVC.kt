@@ -5,18 +5,18 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.View
-import com.ivieleague.kotlin.anko.adapter.swipeToDismiss
-import com.ivieleague.kotlin.anko.horizontalDivider
-import com.ivieleague.kotlin.anko.observable.adapter.standardAdapter
-import com.ivieleague.kotlin.anko.observable.bindString
-import com.ivieleague.kotlin.anko.selectableItemBackgroundResource
-import com.ivieleague.kotlin.anko.stickyHeaders
-import com.ivieleague.kotlin.anko.verticalRecyclerView
-import com.ivieleague.kotlin.anko.viewcontrollers.AnkoViewController
-import com.ivieleague.kotlin.anko.viewcontrollers.containers.VCStack
-import com.ivieleague.kotlin.anko.viewcontrollers.implementations.VCActivity
-import com.ivieleague.kotlin.observable.list.ObservableListWrapper
-import com.ivieleague.kotlin.text.toFloatMaybe
+import com.lightningkite.kotlin.anko.adapter.swipeToDismiss
+import com.lightningkite.kotlin.anko.horizontalDivider
+import com.lightningkite.kotlin.anko.observable.adapter.standardAdapter
+import com.lightningkite.kotlin.anko.observable.bindString
+import com.lightningkite.kotlin.anko.selectableItemBackgroundResource
+import com.lightningkite.kotlin.anko.stickyHeaders
+import com.lightningkite.kotlin.anko.verticalRecyclerView
+import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
+import com.lightningkite.kotlin.anko.viewcontrollers.containers.VCStack
+import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.lightningkite.kotlin.observable.list.ObservableListWrapper
+import com.lightningkite.kotlin.text.toFloatMaybe
 import org.jetbrains.anko.*
 
 /**

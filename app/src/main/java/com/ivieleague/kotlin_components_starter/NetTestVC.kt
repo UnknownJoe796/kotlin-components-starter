@@ -7,32 +7,32 @@ import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
-import com.ivieleague.kotlin.anko.animation.makeHeightAnimator
-import com.ivieleague.kotlin.anko.animation.transitionView
-import com.ivieleague.kotlin.anko.networking.image.bitmap
-import com.ivieleague.kotlin.anko.observable.bindString
-import com.ivieleague.kotlin.anko.observable.lifecycle
-import com.ivieleague.kotlin.anko.progressButton
-import com.ivieleague.kotlin.anko.viewcontrollers.AnkoViewController
-import com.ivieleague.kotlin.anko.viewcontrollers.MainViewController
-import com.ivieleague.kotlin.anko.viewcontrollers.containers.VCStack
-import com.ivieleague.kotlin.anko.viewcontrollers.dialogs.inputDialog
-import com.ivieleague.kotlin.anko.viewcontrollers.implementations.VCActivity
-import com.ivieleague.kotlin.lifecycle.listen
-import com.ivieleague.kotlin.networking.NetMethod
-import com.ivieleague.kotlin.networking.NetRequest
-import com.ivieleague.kotlin.networking.Networking
-import com.ivieleague.kotlin.networking.async
-import com.ivieleague.kotlin.observable.property.StandardObservableProperty
-import com.ivieleague.kotlin.observable.property.bind
-import com.ivieleague.kotlin.range.random
+import com.lightningkite.kotlin.anko.animation.makeHeightAnimator
+import com.lightningkite.kotlin.anko.animation.transitionView
+import com.lightningkite.kotlin.anko.lifecycle
+import com.lightningkite.kotlin.anko.networking.image.bitmap
+import com.lightningkite.kotlin.anko.observable.bindString
+import com.lightningkite.kotlin.anko.progressButton
+import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
+import com.lightningkite.kotlin.anko.viewcontrollers.containers.VCStack
+import com.lightningkite.kotlin.anko.viewcontrollers.dialogs.inputDialog
+import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.lightningkite.kotlin.lifecycle.listen
+import com.lightningkite.kotlin.networking.NetMethod
+import com.lightningkite.kotlin.networking.NetRequest
+import com.lightningkite.kotlin.networking.Networking
+import com.lightningkite.kotlin.networking.async
+import com.lightningkite.kotlin.observable.property.StandardObservableProperty
+import com.lightningkite.kotlin.observable.property.bind
+import com.lightningkite.kotlin.range.random
+import com.lightningkite.kotlin_components_starter.styleDefault
 import org.jetbrains.anko.*
 
 /**
  * A ViewController with various tests on it.
  * Created by josep on 11/6/2015.
  */
-class NetTestVC(val main: MainViewController, val stack: VCStack) : AnkoViewController() {
+class NetTestVC(val main: MainVC, val stack: VCStack) : AnkoViewController() {
 
     //Returns the title for the app bar.
     override fun getTitle(resources: Resources): String = "Net Test"

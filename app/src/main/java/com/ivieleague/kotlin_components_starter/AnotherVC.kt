@@ -3,9 +3,9 @@ package com.ivieleague.kotlin_components_starter
 import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
-import com.ivieleague.kotlin.anko.viewcontrollers.AutocleanViewController
-import com.ivieleague.kotlin.anko.viewcontrollers.containers.VCStack
-import com.ivieleague.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.lightningkite.kotlin.anko.viewcontrollers.AutocleanViewController
+import com.lightningkite.kotlin.anko.viewcontrollers.containers.VCStack
+import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
 import org.jetbrains.anko.alert
 import org.jetbrains.anko.button
 import org.jetbrains.anko.onClick
