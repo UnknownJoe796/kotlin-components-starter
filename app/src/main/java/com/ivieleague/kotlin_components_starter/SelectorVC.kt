@@ -25,7 +25,10 @@ class SelectorVC(val main: MainVC) : AnkoViewController() {
 
     val demos: ArrayList<Pair<String, () -> ViewController>> = arrayListOf(
             "Lists and Adapters" to { ListTestVC(main.stack) },
-            "Networking and more Demo" to { NetTestVC(main, main.stack) }
+            "Networking and more Demo" to { NetTestVC(main, main.stack) },
+            "Coordinator Layout" to { CoordinatorLayoutTestVC(main, main.stack) },
+            "Coordinator Layout 2" to { CoordinatorLayoutTest2VC(main, main.stack) },
+            "Coordinator Layout 3" to { CoordinatorLayoutTest3VC(main, main.stack) }
     )
 
     override fun createView(ui: AnkoContext<VCActivity>): View = ui.verticalLayout {
