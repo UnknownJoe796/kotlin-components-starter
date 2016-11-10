@@ -1,2 +1,365 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\org.jetbrains.anko\anko-sdk15\0.8.3\26601eb26b1bfadb2b1c1e71ddb39200cfaa289e\anko-sdk15-0.8.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="26601eb26b1bfadb2b1c1e71ddb39200cfaa289e">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\anko-sdk15-0.8.3_f74b1f5ac5ecd3219d507f048a64ea3cce8e0597.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_97e9eb601cb8167630f236874e846f3c767928a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_50165cf57b0ce9ac71f3f72bcc487502a989b1ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_da27fdcbab07cb8ce97737baf364306f20e6f60a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_3ca3fa16ebf935e6f4c62c42f7a5f129677aeb80.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\org.jetbrains.anko\anko-gridlayout-v7\0.8.3\8020e6eb9af7f498a85bef34d3d42dcfbe6176b0\anko-gridlayout-v7-0.8.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8020e6eb9af7f498a85bef34d3d42dcfbe6176b0">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\anko-gridlayout-v7-0.8.3_e01a5242b2f52c6ebb1ca5dcc0ce3d4fc007cb4b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_38503afef4f0dbf56a8ab8274a637103aa7d1d7e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-24.2.1_969de051d35617cd8d29d82d1d3aefad82321ed7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\kotlin-components-starter\kotlin-anko-observable\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c766471677433e647d8d4002032baff8932fcf48">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-components-starter-kotlin-anko-observable-unspecified_8e46e37a31c8394ea8a7ec096606a38c5fc72f52.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\org.jetbrains.anko\anko-recyclerview-v7\0.8.3\d0fcc0ed0a93178e4d8f8b6ddc0553df53835eb\anko-recyclerview-v7-0.8.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="0d0fcc0ed0a93178e4d8f8b6ddc0553df53835eb">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\anko-recyclerview-v7-0.8.3_e6f7751ba084a35094896838d27fb274d520652e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\org.jetbrains.anko\anko-cardview-v7\0.8.3\61d8924677cc101575a60629d8de530a1152c06d\anko-cardview-v7-0.8.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="61d8924677cc101575a60629d8de530a1152c06d">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\anko-cardview-v7-0.8.3_f2a81f82ae82a27858df246092b2574b212b6f80.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\kotlin-components-starter\kotlin-anko-networking\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8998e83609b7f282cf71cd73a92de9a1dcc5b080">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-components-starter-kotlin-anko-networking-unspecified_680d21caffe978c0f73d5ddf21cef4dbf7503db6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4e6470fe5081bd76bb727ea9d0d9de373ac5940b">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-gridlayout-v7-24.2.1_67c375dded04dc3c2d7deadbbcfd092bf2403152.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_523c0e8f463ba43310ef8cf7b82cad2e4ec5fb46.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_cd040327fe23302da6e4c4ddd9cb81b227316545.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\org.jetbrains.anko\anko-common\0.8.3\ad10769960178c2c329a7dd6b801f3403558a9da\anko-common-0.8.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ad10769960178c2c329a7dd6b801f3403558a9da">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\anko-common-0.8.3_f0775ee54a072ee18e910ffed74b4964f08dab96.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\okio-1.9.0_eb6c1b811527b4674b7c484bf8d2328e6bd7ac69.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_20faf0ba834784ec7f050c05587590d6991c3078.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_a0c2e1a9b70639b5d1e5e5f59e03fe6e96e04d39.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\org.jetbrains.anko\anko-support-v4\0.8.3\1ca7323c4bbae76e14c7593de8bc085aefb01879\anko-support-v4-0.8.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1ca7323c4bbae76e14c7593de8bc085aefb01879">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\anko-support-v4-0.8.3_501a65bf05dd02f2c5ff33eec60c41dba5a6cbf5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\kotlin-core\build\libs\kotlin-core.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="da5f4fad15f77093e0e905dbe34b4f3ab6286a01">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-core_5efb6cc49260c7aadfa7437aa7481b501a262cce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_3908dde39274ed19b88273e39d0a9273dc99378f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\kotlin-networking\build\libs\kotlin-networking.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a2ad5b34442bdf867522e1546fe83bbd23f55777">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-networking_20d5013ff818417e34c4c42881866fc1a833ffe9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_ca4cf45dd26707024df0903bdc6d7844e7ca1f9f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-runtime\1.0.4\8e25da5e31669f5acf514bdd99b94ff5c7003b3b\kotlin-runtime-1.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8e25da5e31669f5acf514bdd99b94ff5c7003b3b">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-runtime-1.0.4_152a07660166f05ae94f8e7fe3aa5f0a8239726d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\okhttp-3.4.1_3359788ca085d2dd4f1c351288b1c67813d952de.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_dc64c4b48891081b025accc33ccac8986b75a36a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\org.jetbrains.anko\anko-design\0.8.3\a68e7fa6a8a5f1741307afd79eff532f03933374\anko-design-0.8.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a68e7fa6a8a5f1741307afd79eff532f03933374">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\anko-design-0.8.3_6df42cb58547a131051b6505a78e5462ff81d5f2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\kotlin-observable\build\libs\kotlin-observable.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="7454f31c6b5a2a4895f7f409541cd60704f52f9b">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-observable_6e109c8328fd03f4cc458ce9a683070ddf511a33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.github.lightningkite\kotlin-anko-view-controllers\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="54d5108cd23fe6e479c590c418077a5820af547f">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.github.lightningkite-kotlin-anko-view-controllers-unspecified_f842d2d18939601272247e8eeb03e6d9d987ab0a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\com.github.salomonbrys.kotson\kotson\2.1.0\e7be27efa6e0b8afe7889ba1a5400580d6aa3373\kotson-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e7be27efa6e0b8afe7889ba1a5400580d6aa3373">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotson-2.1.0_f212261d3bad305cd24a768f6ea505ba3b52482b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\org.jetbrains.anko\anko-appcompat-v7\0.8.3\6824ac6b605492e43b3476b64c11fb1f9c49b053\anko-appcompat-v7-0.8.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6824ac6b605492e43b3476b64c11fb1f9c49b053">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\anko-appcompat-v7-0.8.3_97b482fad2cb73b2486e755618c7a1eb2176d305.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.6.1\b9d63507329a7178e026fc334f87587ee5070ac5\gson-2.6.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\gson-2.6.1_95cde16ce920654340be120c0c424f3b53b3b47a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_37c0b2ac53bbd0c77366272ac520bd47d1ae3f7d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_8332083845b697d9c9c4edf265f0c5dcbd628036.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.github.lightningkite\kotlin-anko\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="b407bfc3182df55f12e41801b0e92f72e8431e0f">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.github.lightningkite-kotlin-anko-unspecified_72240f5aaeb46cb9486a8963bde4e812f3b63df5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_699cea94c284c7ffda812dbf9ab5c2c33c30bdfb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_7853cc94f5b713424cc8652049a38604b9943766.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_2f60b8a48c18f1caf6372a0063dd886c4abc4806.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.0.4\9c8d1a5d2eea3c9a7f58baa1a2fa11498cb41d0\kotlin-stdlib-1.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="09c8d1a5d2eea3c9a7f58baa1a2fa11498cb41d0">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-stdlib-1.0.4_5c362325fe70ba0b878fd12d0e83de74f13d288d.jar" />
+    </item>
+
+</items>
