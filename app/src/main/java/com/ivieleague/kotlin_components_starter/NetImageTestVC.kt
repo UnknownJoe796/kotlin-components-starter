@@ -3,7 +3,6 @@ package com.ivieleague.kotlin_components_starter
 import android.content.res.Resources
 import android.view.Gravity
 import android.view.View
-import android.widget.ImageView
 import com.lightningkite.kotlin.anko.animation.animateHeight
 import com.lightningkite.kotlin.anko.animation.transitionView
 import com.lightningkite.kotlin.anko.lifecycle
@@ -65,7 +64,7 @@ class NetImageTestVC() : AnkoViewController() {
 
             imageView {
                 animateHeight() //This enables automatic height change animations.
-                scaleType = ImageView.ScaleType.CENTER_CROP
+                adjustViewBounds = true
 
                 //This can be read as:
                 //Right now and whenever imageUrlObs changes, do what is within the curly braces.
