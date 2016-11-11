@@ -5,15 +5,11 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.Gravity
 import android.view.View
+import com.lightningkite.kotlin.anko.*
 import com.lightningkite.kotlin.anko.adapter.swipeToDismiss
-import com.lightningkite.kotlin.anko.horizontalDivider
-import com.lightningkite.kotlin.anko.observable.adapter.standardAdapter
+import com.lightningkite.kotlin.anko.observable.adapter.listAdapter
 import com.lightningkite.kotlin.anko.observable.bindString
-import com.lightningkite.kotlin.anko.selectableItemBackgroundResource
-import com.lightningkite.kotlin.anko.stickyHeaders
-import com.lightningkite.kotlin.anko.verticalRecyclerView
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
-import com.lightningkite.kotlin.anko.viewcontrollers.containers.VCStack
 import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
 import com.lightningkite.kotlin.observable.list.ObservableListWrapper
 import com.lightningkite.kotlin.text.toFloatMaybe
@@ -22,7 +18,7 @@ import org.jetbrains.anko.*
 /**
  * Created by jivie on 2/10/16.
  */
-class ListTestVC(val stack: VCStack) : AnkoViewController() {
+class ObservableListVC() : AnkoViewController() {
 
     val items = ObservableListWrapper(arrayListOf<String>("A", "B", "C"))
 
@@ -31,10 +27,10 @@ class ListTestVC(val stack: VCStack) : AnkoViewController() {
     override fun createView(ui: AnkoContext<VCActivity>): View = ui.verticalLayout {
         gravity = Gravity.CENTER
 
-        verticalRecyclerView() {
+        verticalRecyclerView {
 
-            val adap = standardAdapter(items) { obs ->
-                textView() {
+            adapter = listAdapter(items) { obs ->
+                textView {
                     bindString(obs)
                     gravity = Gravity.CENTER
                     textSize = 18f
@@ -47,16 +43,16 @@ class ListTestVC(val stack: VCStack) : AnkoViewController() {
                 }.lparams(matchParent, wrapContent)
             }
 
-            stickyHeaders(adap.list, {
+            stickyHeaders(items, {
                 when (it.toFloatMaybe()) {
                     null -> "Not a Number"
-                    in 0f..(.5f) -> "Low"
+                    in 0..5 -> "Low"
                     else -> "High"
                 }
             }, {
                 textView {
                     text = it
-                    backgroundColor = resources.getColor(R.color.colorPrimary)
+                    backgroundColor = resources.getColorCompat(R.color.colorPrimary)
                     padding = dip(8)
                 }
             })
@@ -71,7 +67,7 @@ class ListTestVC(val stack: VCStack) : AnkoViewController() {
 
         button("Add") {
             onClick {
-                items.add(Math.random().toString())
+                items.add(Math.random().times(10).plus(1).toInt().toString())
             }
         }.lparams(matchParent, wrapContent)
 

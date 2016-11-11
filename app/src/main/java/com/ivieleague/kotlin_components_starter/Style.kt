@@ -1,9 +1,8 @@
 package com.lightningkite.kotlin_components_starter
 
 import android.graphics.Color
+import android.graphics.Typeface
 import android.widget.TextView
-import org.jetbrains.anko.dip
-import org.jetbrains.anko.padding
 import org.jetbrains.anko.textColor
 
 /**
@@ -15,5 +14,16 @@ import org.jetbrains.anko.textColor
 fun TextView.styleDefault(){
     textSize = 14f
     textColor = Color.WHITE
-    padding = dip(4)
+}
+
+
+fun TextView.styleInvertedTitle() {
+    textSize = 18f
+    textColor = Color.BLACK
+    setTypeface(null, Typeface.BOLD)
+}
+
+fun TextView.styleInverted() {
+    textSize = 14f
+    textColor = Color.BLACK
 }

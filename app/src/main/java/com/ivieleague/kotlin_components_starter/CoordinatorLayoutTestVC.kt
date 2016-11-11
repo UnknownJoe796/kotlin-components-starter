@@ -13,7 +13,6 @@ import com.lightningkite.kotlin.anko.observable.bindAny
 import com.lightningkite.kotlin.anko.selectableItemBackgroundResource
 import com.lightningkite.kotlin.anko.verticalRecyclerView
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
-import com.lightningkite.kotlin.anko.viewcontrollers.containers.VCStack
 import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
 import com.lightningkite.kotlin.observable.list.ObservableListWrapper
 import org.jetbrains.anko.*
@@ -25,7 +24,7 @@ import org.jetbrains.anko.design.coordinatorLayout
 /**
  * Created by joseph on 11/7/16.
  */
-class CoordinatorLayoutTestVC(val main: MainVC, val stack: VCStack) : AnkoViewController() {
+class CoordinatorLayoutTestVC() : AnkoViewController() {
 
     override fun getTitle(resources: Resources): String {
         return "Coordinator Layout Test"
@@ -57,7 +56,7 @@ class CoordinatorLayoutTestVC(val main: MainVC, val stack: VCStack) : AnkoViewCo
 
             }.lparams { scrollFlags = AppBarLayout.LayoutParams.SCROLL_FLAG_SCROLL or AppBarLayout.LayoutParams.SCROLL_FLAG_EXIT_UNTIL_COLLAPSED }
 
-            textView("Constant Bar (to be a tab bar)") {
+            textView("Constant Bar") {
                 padding = dip(8)
                 textSize = 18f
                 textColor = Color.WHITE

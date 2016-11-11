@@ -27,9 +27,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    compile project(':kotlin-anko-view-controllers')
-    compile project(':kotlin-anko-networking')
-    compile project(':kotlin-anko-observable')
+    compile project(':kotlin-anko-full')
 }
 
 buildscript {

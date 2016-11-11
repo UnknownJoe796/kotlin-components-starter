@@ -79,7 +79,7 @@
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="c766471677433e647d8d4002032baff8932fcf48">
+        sha1="7ea900adcea2e836f08048101d1ef704f99e3d66">
         <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-components-starter-kotlin-anko-observable-unspecified_8e46e37a31c8394ea8a7ec096606a38c5fc72f52.jar" />
     </item>
     <item
@@ -106,7 +106,7 @@
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="8998e83609b7f282cf71cd73a92de9a1dcc5b080">
+        sha1="86f17ca92787a1d892ee08a514a01e0aa4fdf48a">
         <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-components-starter-kotlin-anko-networking-unspecified_680d21caffe978c0f73d5ddf21cef4dbf7503db6.jar" />
     </item>
     <item
@@ -187,7 +187,7 @@
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="da5f4fad15f77093e0e905dbe34b4f3ab6286a01">
+        sha1="412336f068744d2ccf5b30643fb8a8b46a223957">
         <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-core_5efb6cc49260c7aadfa7437aa7481b501a262cce.jar" />
     </item>
     <item
@@ -205,8 +205,17 @@
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="a2ad5b34442bdf867522e1546fe83bbd23f55777">
+        sha1="5568c94b30bdfbd9af8a7d8e0b94bc7855f11a30">
         <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-networking_20d5013ff818417e34c4c42881866fc1a833ffe9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\exploded-aar\kotlin-components-starter\kotlin-anko-full\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="03d30be38d4f507e8023f256f9c232167dd20064">
+        <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-components-starter-kotlin-anko-full-unspecified_ab6aede8547b85c3309ffb3cae4ce110ae7ee691.jar" />
     </item>
     <item
         is-multidex="false"
@@ -259,7 +268,7 @@
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="7454f31c6b5a2a4895f7f409541cd60704f52f9b">
+        sha1="4bf40d1283ec83632b0a00678113582fde550bcb">
         <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\kotlin-observable_6e109c8328fd03f4cc458ce9a683070ddf511a33.jar" />
     </item>
     <item
@@ -322,7 +331,7 @@
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="b407bfc3182df55f12e41801b0e92f72e8431e0f">
+        sha1="17eb7d4ad54d82529c24e841699964e75131f46f">
         <dex dex="C:\Users\josep\Documents\Projects\Kotlin\kotlin-components-starter\app\build\intermediates\pre-dexed\debug\com.github.lightningkite-kotlin-anko-unspecified_72240f5aaeb46cb9486a8963bde4e812f3b63df5.jar" />
     </item>
     <item
