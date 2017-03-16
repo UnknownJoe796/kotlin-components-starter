@@ -3,93 +3,57 @@
 
     <item
         is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-appcompat-v7/0.9/69676bf4015be3e182e00dbebea5ee0c9325e78a/anko-appcompat-v7-0.9.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_176b2ea017d57004a8815a58605a91141857ef5d.jar" />
+        sha1="69676bf4015be3e182e00dbebea5ee0c9325e78a">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-appcompat-v7-0.9_0c89d1cf33ecfa16a7e2a20f5a171278508665f8.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-appcompat-v7/0.8.3/6824ac6b605492e43b3476b64c11fb1f9c49b053/anko-appcompat-v7-0.8.3.jar"
+        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.1/98e484e67f913e934559f7f55f0c94be5593f03c/kotlin-stdlib-1.1.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="6824ac6b605492e43b3476b64c11fb1f9c49b053">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-appcompat-v7-0.8.3_6cea59d781127fcb6218c65b1e3ef11e042eb15f.jar" />
+        sha1="98e484e67f913e934559f7f55f0c94be5593f03c">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-stdlib-1.1.1_fb9a3a5f154c86212e1d2bc5e4eb7dd968297e40.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_fe26d92318408fed53a2995b2fac7c0c689ea158.jar" />
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.1_5a5954d345ad80120452c67c8513491d6235c425.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/kotlin-components-starter/kotlin-anko-observable/unspecified/jars/classes.jar"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="ae3e46321e2e27c98c0eba84f1a176c70b5e6b44">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-components-starter-kotlin-anko-observable-unspecified_28965712c841ad770d1acaa83d75a5588f86f550.jar" />
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.1_dd4b4b6ae7dda263751bd32eddd45d6cb7f55097.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-design/0.8.3/a68e7fa6a8a5f1741307afd79eff532f03933374/anko-design-0.8.3.jar"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/design/25.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="a68e7fa6a8a5f1741307afd79eff532f03933374">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-design-0.8.3_e166cad7ca7a29e4db7dd1b739ba91a33265fcfa.jar" />
+        sha1="3b236883e0df6002cabb01ce57d00a5b1e5de610">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.0.1_3faf5652fa706e48aac65fda0baf803b9c9283d9.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-recyclerview-v7/0.8.3/d0fcc0ed0a93178e4d8f8b6ddc0553df53835eb/anko-recyclerview-v7-0.8.3.jar"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="0d0fcc0ed0a93178e4d8f8b6ddc0553df53835eb">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-recyclerview-v7-0.8.3_55a853093f70cadc839c42c20b090b54c282770c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_4ad93972265efe2748774513ed315f6dc419186e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/kotlin-components-starter/kotlin-anko-networking/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ff54d902709d5bdf7a4fec51fff369cf357cfd68">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-components-starter-kotlin-anko-networking-unspecified_a1dd67fd298e83bf384872b1d76e676cb984633f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-runtime/1.0.4/8e25da5e31669f5acf514bdd99b94ff5c7003b3b/kotlin-runtime-1.0.4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="8e25da5e31669f5acf514bdd99b94ff5c7003b3b">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-runtime-1.0.4_3140114b590670ada047c853fe513580b08a065c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.0.4/9c8d1a5d2eea3c9a7f58baa1a2fa11498cb41d0/kotlin-stdlib-1.0.4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="09c8d1a5d2eea3c9a7f58baa1a2fa11498cb41d0">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-stdlib-1.0.4_8685397697ce62f1ff1c4179deffd932a8adb6d7.jar" />
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_3bce2ceba7ec86523f1055562cdeb42ab28ca837.jar" />
     </item>
     <item
         is-multidex="false"
@@ -98,61 +62,97 @@
         optimize="true"
         revision="23.0.3"
         sha1="e7be27efa6e0b8afe7889ba1a5400580d6aa3373">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotson-2.1.0_d3b5e1d569da89c598335e0496f8e2948d8bd26c.jar" />
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotson-2.1.0_d3b5e1d569da89c598335e0496f8e2948d8bd26c.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-common/0.8.3/ad10769960178c2c329a7dd6b801f3403558a9da/anko-common-0.8.3.jar"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/kotlin-core/build/libs/kotlin-core.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="ad10769960178c2c329a7dd6b801f3403558a9da">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-common-0.8.3_fe004451acefcd3183f93324df1b1cea65ca8ce1.jar" />
+        sha1="17e0efd7d9e10e6997a9e2190d4038509ce12be3">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-core_d9d0fcd436255439521189b87634edba6bf9068b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/kotlin-observable/build/libs/kotlin-observable.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_d0b20e86328158556b683084c4200fdf0d1459c1.jar" />
+        sha1="343285a817cd138c2708c10a0cde451977a2ebb7">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-observable_19bae2b4a670cf211846233c741c42eb0ed2d304.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-support-v4/0.8.3/1ca7323c4bbae76e14c7593de8bc085aefb01879/anko-support-v4-0.8.3.jar"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="1ca7323c4bbae76e14c7593de8bc085aefb01879">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-support-v4-0.8.3_086345171641b45313c69cd78f1b7a853693c925.jar" />
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_912d9ca3c528eac49262605b4f13dda0f7c896b9.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.github.lightningkite/kotlin-anko/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.2.1_dbb2e1af02728f89bbacf027aba9f35627753119.jar" />
+        sha1="3996d2456b0c954aa27e3d839603251be967658a">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.github.lightningkite-kotlin-anko-unspecified_fff2d0cf30821c1e2454607610c2147544f096b9.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_5fe495d10211d98bfb2a86182336a619faa7502f.jar" />
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.0.1_3222d7b27664b12b4032ebef0d6ffb8c4d3c18e3.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-sdk15/0.9/e741cd0d94e63a27bc7b8cbd8d04571c058bab32/anko-sdk15-0.9.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_d916f04df114ea9496dc53562374aaa22d8e14dc.jar" />
+        sha1="e741cd0d94e63a27bc7b8cbd8d04571c058bab32">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-sdk15-0.9_49e83844147ac57ccea3748f3d2596588d18f57c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_67dde932944deb42ea392ebb083e48fb96f19ee1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4700f436ede140fb804204f806c9cc3f08e386f4">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-gridlayout-v7-25.0.1_4cc0c2df3a2ad6e93b673b207045bee3bbfb5e94.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-gridlayout-v7/0.9/161d0d9bc786905b1e7bd5854844e2aeb3946d0e/anko-gridlayout-v7-0.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="161d0d9bc786905b1e7bd5854844e2aeb3946d0e">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-gridlayout-v7-0.9_ffff2712b44eb1a87eaa53ec7466309e022b5778.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/kotlin-components-starter/kotlin-anko-observable/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="dc0485905896656619ba141d5726310db6544d28">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-components-starter-kotlin-anko-observable-unspecified_e4fe73f2261bf92019cf82045511428d01f67343.jar" />
     </item>
     <item
         is-multidex="false"
@@ -161,16 +161,34 @@
         optimize="true"
         revision="23.0.3"
         sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/gson-2.6.1_b6662c2221e79ffd7e0f2d661959de19cd89e3bf.jar" />
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/gson-2.6.1_b6662c2221e79ffd7e0f2d661959de19cd89e3bf.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-sdk15/0.8.3/26601eb26b1bfadb2b1c1e71ddb39200cfaa289e/anko-sdk15-0.8.3.jar"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/kotlin-components-starter/kotlin-anko-networking/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="26601eb26b1bfadb2b1c1e71ddb39200cfaa289e">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-sdk15-0.8.3_26411f5a5c1ef0d6543b344c0ba0bb6408a3aabf.jar" />
+        sha1="e495e2109e09b9588f821d3f61c99c5b18ebf0a3">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-components-starter-kotlin-anko-networking-unspecified_d9264a6d3f95026d4367298b87871731367d84a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-design/0.9/52088ce213618c1a08f0f0f29d6e48e110887b9a/anko-design-0.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="52088ce213618c1a08f0f0f29d6e48e110887b9a">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-design-0.9_e22e0d71adb3daafbcdb3b1c0d9a91f6d4cb5758.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.0.1_b2f1a2e741fe38ebcab120722fc654865de204a7.jar" />
     </item>
     <item
         is-multidex="false"
@@ -179,160 +197,178 @@
         optimize="true"
         revision="23.0.3"
         sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/okio-1.9.0_fbc61d1ae2ff3ec3762b17e4f277b1b1c6c13469.jar" />
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/okio-1.9.0_fbc61d1ae2ff3ec3762b17e4f277b1b1c6c13469.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_5409ca3c91b93dfe338bcc7187b37b54f9219b6f.jar" />
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_35598e8abec352bbd54919ce0a311197109adca7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/kotlin-core/build/libs/kotlin-core.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="86180aae031db1c8e5d3690276997ee399059931">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-core_dfdeedc542e3588e2ab60596e33d8af2e5386183.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/kotlin-components-starter/kotlin-anko-full/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="1937ed9b95c95e8336a95b00fd46f414ae2134f1">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-components-starter-kotlin-anko-full-unspecified_eee6ff4e39864bbbee0ed4dcb31ee89ddfbd5755.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_078f148ad2d58748049bcc04b1393247d143c5a7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.1_d30d8283271d42d79052c1c3901beeac33245f60.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-gridlayout-v7/0.8.3/8020e6eb9af7f498a85bef34d3d42dcfbe6176b0/anko-gridlayout-v7-0.8.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="8020e6eb9af7f498a85bef34d3d42dcfbe6176b0">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-gridlayout-v7-0.8.3_785d7b5e749dd8e49a68270f89dd00ad023225e6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-design-24.2.1_d6549dffa39261c84a398844a152375b57c88142.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_4adc0091b2c83510decd21e36112683d94a46136.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_9e55163006594ec3899a9f3d3865a29c7e594f74.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_61807917bcef19259b1c9bb2cf2b4b8db77bdf36.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="4e6470fe5081bd76bb727ea9d0d9de373ac5940b">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-gridlayout-v7-24.2.1_15453edb066f1e0e07f185917ba180c58068fbfa.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/kotlin-observable/build/libs/kotlin-observable.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="e5152df676a366795e356f098dd12b779e7d6a65">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-observable_69f4603c6cd213073f7974bd1202a93a642b39f5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_ca39d96da74b3d117425f798e67dfa6964114026.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-cardview-v7/0.8.3/61d8924677cc101575a60629d8de530a1152c06d/anko-cardview-v7-0.8.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="61d8924677cc101575a60629d8de530a1152c06d">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-cardview-v7-0.8.3_c86d44c2bb435943ac013bfa623b9338243eb630.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.github.lightningkite/kotlin-anko-view-controllers/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="3b38f3578f4a1add3a25a6475220359205d8a5be">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.github.lightningkite-kotlin-anko-view-controllers-unspecified_4663f8725a9a8ac565242f2bf97fc12ba5d18b3e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/kotlin-networking/build/libs/kotlin-networking.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="6802d1d5c9dc4c24103e91e3d80c1f06fa9d94a8">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-networking_cda5c57ec82f96a2664ff51152740219354a9dd3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_2e0e316f98a4cefcf3791b14f20fbcd7e18f95e5.jar" />
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.1_4dea9cc5cb54e217f976c196851e7cec1295a675.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.1_80e5987e9c042c0c693fb1406c828c534fa0738e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.0.1_fb9fb991656deecfbfde458ce98c8acc27876d5b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.1_eab2f99a70a11db80f7a022febfab1e458cc67ac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-cardview-v7/0.9/e8111d62c124cb4f3ba040fc65f75b7db0ae7631/anko-cardview-v7-0.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e8111d62c124cb4f3ba040fc65f75b7db0ae7631">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-cardview-v7-0.9_a8116329af120c763e3a7bdcfc3dd166c39a0f5b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/kotlin-networking/build/libs/kotlin-networking.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4488e439c137f02d4d3ab9e3ebd02fad61674683">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-networking_575b1ad423373fbd832a67ebadada848a1856027.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-common/0.9/26c6156bea5eb494474c90528240daadf4b067c8/anko-common-0.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="26c6156bea5eb494474c90528240daadf4b067c8">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-common-0.9_2ad958f9e054bc0187699d72bf88bf78c454bd0e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_a0461cf79d3909a61e4d784c533bc37cc8388be5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1108575c7dc7b7f5b378b3290ac90de81a9b8830">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-25.0.1_e5bf6f7440759b8125bee6d33fade67054b2c5cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.0.1_6a2d1f9739a13bfbe0557b6123eb3bcd2b500192.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/kotlin-components-starter/kotlin-anko-full/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="09caf7780897c7d3867a57c4b12ecf087c331877">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/kotlin-components-starter-kotlin-anko-full-unspecified_6726ccf467156fa9fbc1a5d572ab6a7b48295124.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.0.1_37fb057b0237a646ac3d063f8ee12dd2d8c45d72.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.0.1_7c7ffbc317494ec2f5f41b6a725af2522bcaf087.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.github.lightningkite/kotlin-anko-view-controllers/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="40bd915e592f877f2e63d4ad8a7224b995a458ae">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.github.lightningkite-kotlin-anko-view-controllers-unspecified_1237dcf5d105ec6cbcc0bf8b48b2750587c26358.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-support-v4/0.9/4616ffe811fc931672c50fb05834a62aa24cdab2/anko-support-v4-0.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4616ffe811fc931672c50fb05834a62aa24cdab2">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-support-v4-0.9_196625e8a3f8043476b931948df2b861c1d97433.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.1_744bcb744c5f0214fe925cc9e2c48328e6537485.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="919f0dfe192fb4e063e7dacadee7f8bb9a2672a9">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/annotations-13.0_fdc99bb907b1424fc2f6796b30ac3c885ea9237c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joseph/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-recyclerview-v7/0.9/edf89d7cedde1b778af7ab32f350654e8b2df4eb/anko-recyclerview-v7-0.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="edf89d7cedde1b778af7ab32f350654e8b2df4eb">
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/anko-recyclerview-v7-0.9_f96be2097fb45fe1617f4692c118293c9f54af0c.jar" />
     </item>
     <item
         is-multidex="false"
@@ -341,34 +377,7 @@
         optimize="true"
         revision="23.0.3"
         sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_01ea62809025fde665f940e5e680f8a02b7203a3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.github.lightningkite/kotlin-anko/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="69f598df731e82ad4a8620649d6811dfada06abe">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.github.lightningkite-kotlin-anko-unspecified_7553d5825b6314f861f99f8e973474155fa266fa.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.1_9180aad1996bb0f7fdef04d337ac37c6e8779cf4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
-        <dex dex="/home/joseph/Android/Projects/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-24.2.1_59feb59c2dc12cf0a9be284daa8de786825dc122.jar" />
+        <dex dex="/home/joseph/Kotlin/kotlin-components-starter/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_01ea62809025fde665f940e5e680f8a02b7203a3.jar" />
     </item>
 
 </items>
