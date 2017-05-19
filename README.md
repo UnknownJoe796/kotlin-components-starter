@@ -1,7 +1,7 @@
 # kotlin-components-starter
 Helps you start out a Kotlin Components for Android project.
 
-The comments should guide you.
+The comments should guide you.  Also, check out the submodules' `README.md`s.
 
 If you have any questions, please ask them!  josephivie-at-gmail.com.
 
