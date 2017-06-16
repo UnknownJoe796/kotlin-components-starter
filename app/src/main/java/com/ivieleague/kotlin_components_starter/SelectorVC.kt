@@ -25,6 +25,7 @@ class SelectorVC(val main: MainVC) : AnkoViewController() {
 
     val demos: ArrayList<Pair<String, () -> ViewController>> = arrayListOf(
             "Observable List" to { ObservableListVC() },
+            "Observable List 2" to { ObservableList2VC() },
             "Network Image" to { NetImageTestVC() },
             "Observable Property" to { ObservablePropertyTestVC() },
             "View Controller Stacks" to { StackDemoVC(main.stack) },
