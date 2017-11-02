@@ -4,12 +4,15 @@ import com.lightningkite.kotlin.networking.OkHttpApi
 import com.lightningkite.kotlin.networking.lambdaGson
 
 /**
+ * An example API.
  * Created by josep on 11/10/2016.
  */
 object ExampleAPI : OkHttpApi {
     override val baseUrl: String = "https://jsonplaceholder.typicode.com"
 
-    val getPosts = requestBuilder("/posts").get().lambdaGson<List<Post>>()
+    val getPosts = requestBuilder("/posts")
+            .get()
+            .lambdaGson<List<Post>>()
 }
 
 class Post(

@@ -4,7 +4,7 @@ import android.view.View
 import com.lightningkite.kotlin.anko.lifecycle
 import com.lightningkite.kotlin.anko.observable.bindString
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
-import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.observable.property.StandardObservableProperty
 import com.lightningkite.kotlin.observable.property.bind
 import com.lightningkite.kotlin_components_starter.styleDefault
@@ -18,7 +18,7 @@ class ObservablePropertyTestVC() : AnkoViewController() {
     val textObs = StandardObservableProperty("Start Text")
     var text by textObs
 
-    override fun createView(ui: AnkoContext<VCActivity>): View = ui.verticalLayout {
+    override fun createView(ui: AnkoContext<VCContext>): View = ui.verticalLayout {
 
         textView("This is an editable binding to an observable.")
                 .lparams(matchParent, wrapContent) { margin = dip(8) }

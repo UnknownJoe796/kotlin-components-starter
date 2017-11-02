@@ -8,7 +8,7 @@ import com.lightningkite.kotlin.anko.observable.adapter.listAdapter
 import com.lightningkite.kotlin.anko.observable.progressLayout
 import com.lightningkite.kotlin.anko.verticalRecyclerView
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
-import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.async.invokeAsync
 import com.lightningkite.kotlin.observable.list.observableListOf
 import com.lightningkite.kotlin.observable.property.bind
@@ -39,7 +39,7 @@ class NetworkListVC : AnkoViewController() {
         }
     }
 
-    override fun createView(ui: AnkoContext<VCActivity>): View = ui.verticalLayout {
+    override fun createView(ui: AnkoContext<VCContext>): View = ui.verticalLayout {
 
         textView("This data is from https://jsonplaceholder.typicode.com/.") {
             styleDefault()

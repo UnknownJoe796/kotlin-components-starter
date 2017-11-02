@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="com.github.salomonbrys.kotson:kotson:2.2.2@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.salomonbrys.kotson/kotson/2.2.2/edca3898191a621e83f4d148389e483f99ddac2c/kotson-2.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.salomonbrys.kotson/kotson/2.2.2/288da1d7a81f5582f66ba99cabb06639e866472d/kotson-2.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

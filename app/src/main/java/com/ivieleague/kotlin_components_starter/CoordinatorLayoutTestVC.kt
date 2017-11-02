@@ -13,7 +13,7 @@ import com.lightningkite.kotlin.anko.observable.bindAny
 import com.lightningkite.kotlin.anko.selectableItemBackgroundResource
 import com.lightningkite.kotlin.anko.verticalRecyclerView
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
-import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.observable.list.ObservableListWrapper
 import org.jetbrains.anko.*
 import org.jetbrains.anko.appcompat.v7.toolbar
@@ -32,13 +32,12 @@ class CoordinatorLayoutTestVC() : AnkoViewController() {
 
     val junk = ObservableListWrapper((0..100).map { Math.random() }.toMutableList())
 
-    override fun createView(ui: AnkoContext<VCActivity>): View = ui.coordinatorLayout {
+    override fun createView(ui: AnkoContext<VCContext>): View = ui.coordinatorLayout {
         appBarLayout {
             collapsingToolbarLayout {
 
                 toolbar() {
                     title = "Pinned Title"
-                    gravity = Gravity.CENTER
 
                     layoutParams = CollapsingToolbarLayout.LayoutParams(matchParent, dip(30)).apply {
                         collapseMode = CollapsingToolbarLayout.LayoutParams.COLLAPSE_MODE_OFF

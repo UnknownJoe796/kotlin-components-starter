@@ -8,8 +8,8 @@ import com.lightningkite.kotlin.anko.observable.adapter.listAdapter
 import com.lightningkite.kotlin.anko.selectableItemBackgroundResource
 import com.lightningkite.kotlin.anko.verticalRecyclerView
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
+import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.anko.viewcontrollers.ViewController
-import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
 import com.lightningkite.kotlin.observable.property.bind
 import org.jetbrains.anko.*
 import java.util.*
@@ -33,7 +33,7 @@ class SelectorVC(val main: MainVC) : AnkoViewController() {
             "List from Network" to { NetworkListVC() }
     )
 
-    override fun createView(ui: AnkoContext<VCActivity>): View = ui.verticalLayout {
+    override fun createView(ui: AnkoContext<VCContext>): View = ui.verticalLayout {
 
         textView(R.string.welcome_message) {
             minimumHeight = dip(48)
@@ -50,7 +50,7 @@ class SelectorVC(val main: MainVC) : AnkoViewController() {
                     lifecycle.bind(itemObs) {
                         text = it.first
                     }
-                    onClick {
+                    setOnClickListener { it: View? ->
                         main.stack.push(itemObs.value.second())
                     }
                 }.lparams(matchParent, wrapContent)

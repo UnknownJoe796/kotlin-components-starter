@@ -12,7 +12,7 @@ import com.lightningkite.kotlin.anko.observable.adapter.listAdapter
 import com.lightningkite.kotlin.anko.selectableItemBackgroundResource
 import com.lightningkite.kotlin.anko.verticalRecyclerView
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
-import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.observable.list.ObservableListWrapper
 import com.lightningkite.kotlin.observable.list.sorting
 import com.lightningkite.kotlin.observable.property.bind
@@ -29,7 +29,7 @@ class ObservableList2VC() : AnkoViewController() {
 
     override fun getTitle(resources: Resources): String = "List Test"
 
-    override fun createView(ui: AnkoContext<VCActivity>): View = ui.verticalLayout {
+    override fun createView(ui: AnkoContext<VCContext>): View = ui.verticalLayout {
         gravity = Gravity.CENTER
 
         verticalRecyclerView {
@@ -63,13 +63,13 @@ class ObservableList2VC() : AnkoViewController() {
         }.lparams(matchParent, 0, 1f)
 
         button("Add") {
-            onClick {
+            setOnClickListener { it: View? ->
                 items.add(Math.random().times(190).plus(1).toInt().toString() + " N")
             }
         }.lparams(matchParent, wrapContent)
 
         button("Update Random") {
-            onClick {
+            setOnClickListener { it: View? ->
                 val index = items.indices.random()
                 items[index] = items[index] + " M"
             }

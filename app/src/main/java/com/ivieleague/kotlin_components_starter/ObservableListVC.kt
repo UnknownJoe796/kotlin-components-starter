@@ -8,10 +8,10 @@ import android.view.View
 import com.lightningkite.kotlin.anko.*
 import com.lightningkite.kotlin.anko.adapter.swipeToDismiss
 import com.lightningkite.kotlin.anko.observable.adapter.listAdapter
-import com.lightningkite.kotlin.anko.observable.bindString
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
-import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
+import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.observable.list.ObservableListWrapper
+import com.lightningkite.kotlin.observable.property.bind
 import com.lightningkite.kotlin.text.toFloatMaybe
 import org.jetbrains.anko.*
 
@@ -24,19 +24,21 @@ class ObservableListVC() : AnkoViewController() {
 
     override fun getTitle(resources: Resources): String = "List Test"
 
-    override fun createView(ui: AnkoContext<VCActivity>): View = ui.verticalLayout {
+    override fun createView(ui: AnkoContext<VCContext>): View = ui.verticalLayout {
         gravity = Gravity.CENTER
 
         verticalRecyclerView {
 
             adapter = listAdapter(items) { obs ->
                 textView {
-                    bindString(obs)
+                    lifecycle.bind(obs) {
+                        text = it + " (position: ${obs.position})"
+                    }
                     gravity = Gravity.CENTER
                     textSize = 18f
                     minimumHeight = dip(40)
                     backgroundResource = selectableItemBackgroundResource
-                    onLongClick {
+                    setOnLongClickListener {
                         items.removeAt(obs.position)
                         true
                     }
@@ -66,7 +68,7 @@ class ObservableListVC() : AnkoViewController() {
         }.lparams(matchParent, 0, 1f)
 
         button("Add") {
-            onClick {
+            setOnClickListener { it: View? ->
                 items.add(Math.random().times(10).plus(1).toInt().toString())
             }
         }.lparams(matchParent, wrapContent)

@@ -9,8 +9,8 @@ import com.lightningkite.kotlin.anko.lifecycle
 import com.lightningkite.kotlin.anko.networking.image.lambdaBitmapExif
 import com.lightningkite.kotlin.anko.progressButton
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
+import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.anko.viewcontrollers.dialogs.inputDialog
-import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
 import com.lightningkite.kotlin.async.invokeAsync
 import com.lightningkite.kotlin.observable.property.StandardObservableProperty
 import com.lightningkite.kotlin.observable.property.bind
@@ -30,19 +30,19 @@ class NetImageTestVC() : AnkoViewController() {
     //Creates and observable property, initialized to null.
     val imageUrlObs = StandardObservableProperty<String?>(null)
 
-    override fun createView(ui: AnkoContext<VCActivity>): View = ui.verticalLayout {
+    override fun createView(ui: AnkoContext<VCContext>): View = ui.verticalLayout {
         gravity = Gravity.CENTER
 
         button("Enter an image URL") {
-            onClick {
-                ui.owner.inputDialog("Enter an image URL", "URL", "") { url ->
+            setOnClickListener { it: View? ->
+                ui.ctx.inputDialog("Enter an image URL", "URL", "") { url ->
                     imageUrlObs.value = url
                 }
             }
         }
 
         progressButton("Lorem Pixel") {
-            onClick {
+            setOnClickListener {
                 imageUrlObs.value = "http://lorempixel.com/${(200..600).random()}/${(200..600).random()}"
             }
         }
@@ -79,7 +79,8 @@ class NetImageTestVC() : AnkoViewController() {
                                 .url(url)
                                 .get()
                                 .lambdaBitmapExif(context) //this last one builds the request into a lambda, which can then be run using invoke()
-                                .invokeAsync { response -> //this invokes the lambda on a separate thread, then runs this callback on the UI thread
+                                .invokeAsync { response ->
+                                    //this invokes the lambda on a separate thread, then runs this callback on the UI thread
                                     if (response.isSuccessful()) {
                                         imageBitmap = response.result
                                         this@transitionView.animate("image") //transitions us to the "image" view
