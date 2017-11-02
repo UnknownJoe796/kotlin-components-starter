@@ -30,7 +30,7 @@ class NetworkListVC : AnkoViewController() {
     val posts = observableListOf<Post>()
 
     init {
-        ExampleAPI.getPosts.invokeAsync {
+        ExampleAPI.getPosts().invokeAsync {
             if (it.isSuccessful()) {
                 posts.replace(it.result!!)
             } else {

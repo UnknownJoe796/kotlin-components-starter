@@ -2,4 +2,5 @@
     <string name="app_name">kotlin-components-starter</string>
     <string name="welcome_message">Pick a demo.</string>
     <string name="main_menu">Main Menu</string>
+    <string name="validation_email_blank">Please fill out your email.</string>
 </resources>
