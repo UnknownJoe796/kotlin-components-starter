@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="org.jetbrains.anko:anko-gridlayout-v7:0.10.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-gridlayout-v7/0.10.0/f2a4e034f1de57d7e3b19dfe7e56f06e224ed277/anko-gridlayout-v7-0.10.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-gridlayout-v7/0.10.0/9d585fe9bfd270860e634ef57fc0fc4afde50883/anko-gridlayout-v7-0.10.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

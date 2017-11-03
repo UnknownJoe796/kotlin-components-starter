@@ -29,7 +29,7 @@ import org.jetbrains.anko.design.textInputLayout
  * An example login view.
  * Created by joseph on 11/2/17.
  */
-class ExampleLoginVC : AnkoViewController() {
+class ExampleLoginVC(val onLogin: (LoginData) -> Unit) : AnkoViewController() {
 
     override fun getTitle(resources: Resources): String = "Example Login"
 
@@ -37,15 +37,15 @@ class ExampleLoginVC : AnkoViewController() {
 
     val emailObs = StandardObservableProperty("").withValidation {
         when {
-            it.isBlank() -> string("Please enter your email.")
-            !it.isEmail() -> string("'$it' is not a valid email.")
+            it.isBlank() -> resource(R.string.validation_email_blank)
+            !it.isEmail() -> { resources -> resources.getString(R.string.validation_email_invalid, it) }
             else -> null
         }
     }
     val passwordObs = StandardObservableProperty("").withValidation {
         when {
-            it.isBlank() -> string("Please enter your password.")
-            it.length < 8 -> string("Password isn't long enough to be valid.")
+            it.isBlank() -> resource(R.string.validation_password_empty)
+            it.length < 8 -> resource(R.string.validation_password_short)
             else -> null
         }
     }
@@ -65,7 +65,7 @@ class ExampleLoginVC : AnkoViewController() {
             var loginButton: Button? = null
 
             textInputLayout {
-                hint = "Email"
+                hint = context.getString(R.string.email)
                 textInputEditText {
                     inputType = FullInputType.EMAIL
                     bindString(emailObs)
@@ -74,7 +74,7 @@ class ExampleLoginVC : AnkoViewController() {
             }.lparams(matchParent, wrapContent) { margin = dip(8) }
 
             textInputLayout {
-                hint = "Password"
+                hint = context.getString(R.string.password)
                 textInputEditText {
                     inputType = FullInputType.PASSWORD
                     bindString(passwordObs)
@@ -88,13 +88,13 @@ class ExampleLoginVC : AnkoViewController() {
             progressLayout { runningObs: MutableObservableProperty<Boolean> ->
                 button {
                     loginButton = this
-                    text = "Log In"
+                    text = context.getString(R.string.log_in)
                     setOnClickListener {
                         if (isValid()) {
                             attemptLogin()
                                     .captureProgress(runningObs) //sets the observable to true when task is started, false when complete
                                     .captureSuccess { loginData: LoginData ->
-                                        context.infoDialog(message = "You logged in successfully as ${loginData.email}!")
+                                        onLogin.invoke(loginData)
                                     }
                                     .captureFailure { response: TypedResponse<LoginData> ->
                                         context.infoDialog(message = "You failed to log in.  Response from server: \n${response.errorString}")

@@ -3,4 +3,10 @@
     <string name="welcome_message">Pick a demo.</string>
     <string name="main_menu">Main Menu</string>
     <string name="validation_email_blank">Please fill out your email.</string>
+    <string name="validation_email_invalid">\'%1$s\' is not a valid email.</string>
+    <string name="validation_password_empty">Please enter your password.</string>
+    <string name="validation_password_short">Password isn\'t long enough to be valid.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
 </resources>

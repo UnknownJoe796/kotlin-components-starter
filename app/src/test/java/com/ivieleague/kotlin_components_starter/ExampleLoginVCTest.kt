@@ -6,7 +6,7 @@ class ExampleLoginVCTest {
 
     @Test
     fun successfulLogin() {
-        val vc = ExampleLoginVC()
+        val vc = ExampleLoginVC({})
         vc.emailObs.value = "test@gmail.com"
         vc.passwordObs.value = "testpass"
         assert(vc.isValid())
@@ -15,7 +15,7 @@ class ExampleLoginVCTest {
 
     @Test
     fun failedLoginEmail() {
-        val vc = ExampleLoginVC()
+        val vc = ExampleLoginVC({})
         vc.emailObs.value = "wrong@gmail.com"
         vc.passwordObs.value = "testpass"
         assert(vc.isValid())
@@ -24,7 +24,7 @@ class ExampleLoginVCTest {
 
     @Test
     fun failedLoginPassword() {
-        val vc = ExampleLoginVC()
+        val vc = ExampleLoginVC({})
         vc.emailObs.value = "test@gmail.com"
         vc.passwordObs.value = "wrongpass"
         assert(vc.isValid())
@@ -33,7 +33,7 @@ class ExampleLoginVCTest {
 
     @Test
     fun emptyEmail() {
-        val vc = ExampleLoginVC()
+        val vc = ExampleLoginVC({})
         vc.emailObs.value = ""
         vc.passwordObs.value = "testpass"
         assert(!vc.isValid())
@@ -41,7 +41,7 @@ class ExampleLoginVCTest {
 
     @Test
     fun invalidEmail() {
-        val vc = ExampleLoginVC()
+        val vc = ExampleLoginVC({})
         vc.emailObs.value = "not an email"
         vc.passwordObs.value = "testpass"
         assert(!vc.isValid())
@@ -49,7 +49,7 @@ class ExampleLoginVCTest {
 
     @Test
     fun emptyPassword() {
-        val vc = ExampleLoginVC()
+        val vc = ExampleLoginVC({})
         vc.emailObs.value = "test@gmail.com"
         vc.passwordObs.value = ""
         assert(!vc.isValid())
@@ -57,7 +57,7 @@ class ExampleLoginVCTest {
 
     @Test
     fun incompletePassword() {
-        val vc = ExampleLoginVC()
+        val vc = ExampleLoginVC({})
         vc.emailObs.value = "test@gmail.com"
         vc.passwordObs.value = "test"
         assert(!vc.isValid())
