@@ -25,6 +25,7 @@ import org.junit.runner.RunWith
 @RunWith(value = AndroidJUnit4::class)
 @LargeTest
 class ExampleLoginVCEspressoTest {
+    var loginData: LoginData? = null
     init {
         MainActivity.main = MainVC().apply {
             stack.root()
@@ -36,7 +37,6 @@ class ExampleLoginVCEspressoTest {
     @JvmField
     val activityRule = ActivityTestRule(MainActivity::class.java)
 
-    var loginData: LoginData? = null
 
     val asyncIdlingResource = object : IdlingResource {
         var callback: IdlingResource.ResourceCallback? = null
