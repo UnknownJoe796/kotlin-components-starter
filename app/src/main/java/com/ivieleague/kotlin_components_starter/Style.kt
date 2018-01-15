@@ -1,4 +1,4 @@
-package com.lightningkite.kotlin_components_starter
+package com.ivieleague.kotlin_components_starter
 
 import android.graphics.Color
 import android.graphics.Typeface

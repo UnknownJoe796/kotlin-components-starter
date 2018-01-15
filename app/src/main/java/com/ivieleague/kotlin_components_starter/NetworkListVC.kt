@@ -3,22 +3,23 @@ package com.ivieleague.kotlin_components_starter
 import android.content.res.Resources
 import android.graphics.Color
 import android.view.View
+import com.lightningkite.kotlin.anko.async.UIThread
 import com.lightningkite.kotlin.anko.lifecycle
 import com.lightningkite.kotlin.anko.observable.adapter.listAdapter
 import com.lightningkite.kotlin.anko.observable.progressLayout
 import com.lightningkite.kotlin.anko.verticalRecyclerView
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
 import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
-import com.lightningkite.kotlin.async.invokeAsync
+import com.lightningkite.kotlin.async.Async
+import com.lightningkite.kotlin.async.invokeOn
+import com.lightningkite.kotlin.async.thenOn
 import com.lightningkite.kotlin.observable.list.observableListOf
 import com.lightningkite.kotlin.observable.property.bind
-import com.lightningkite.kotlin_components_starter.styleDefault
-import com.lightningkite.kotlin_components_starter.styleInverted
-import com.lightningkite.kotlin_components_starter.styleInvertedTitle
 import org.jetbrains.anko.*
 import org.jetbrains.anko.cardview.v7.cardView
 
 /**
+ * Demonstrates loading and displaying a list from the network.
  * Created by josep on 11/10/2016.
  */
 class NetworkListVC : AnkoViewController() {
@@ -30,13 +31,13 @@ class NetworkListVC : AnkoViewController() {
     val posts = observableListOf<Post>()
 
     init {
-        ExampleAPI.getPosts().invokeAsync {
+        ExampleAPI.getPosts().thenOn(UIThread) {
             if (it.isSuccessful()) {
                 posts.replace(it.result!!)
             } else {
                 posts.add(Post(title = "Loading error", body = it.errorString ?: "Unknown error"))
             }
-        }
+        }.invokeOn(Async)
     }
 
     override fun createView(ui: AnkoContext<VCContext>): View = ui.verticalLayout {

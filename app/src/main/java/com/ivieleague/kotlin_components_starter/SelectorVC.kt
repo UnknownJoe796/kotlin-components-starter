@@ -15,6 +15,7 @@ import org.jetbrains.anko.*
 import java.util.*
 
 /**
+ * A [ViewController] for selecting which demo you want to view.
  * Created by jivie on 5/5/16.
  */
 class SelectorVC(val main: MainVC) : AnkoViewController() {

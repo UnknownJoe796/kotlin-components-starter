@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="kotlin-core.kotlin-core-sources">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/kotlin-core/build/libs/kotlin-core-sources.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

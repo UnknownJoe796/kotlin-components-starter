@@ -7,10 +7,10 @@ import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
 import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.observable.property.StandardObservableProperty
 import com.lightningkite.kotlin.observable.property.bind
-import com.lightningkite.kotlin_components_starter.styleDefault
 import org.jetbrains.anko.*
 
 /**
+ * A [AnkoViewController] for demonstrating observable binding.
  * Created by josep on 11/10/2016.
  */
 class ObservablePropertyTestVC() : AnkoViewController() {

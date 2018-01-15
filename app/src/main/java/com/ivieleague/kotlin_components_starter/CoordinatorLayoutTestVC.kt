@@ -22,7 +22,7 @@ import org.jetbrains.anko.design.collapsingToolbarLayout
 import org.jetbrains.anko.design.coordinatorLayout
 
 /**
- * Created by joseph on 11/7/16.
+ * A view for testing the coordinator layout.
  */
 class CoordinatorLayoutTestVC() : AnkoViewController() {
 

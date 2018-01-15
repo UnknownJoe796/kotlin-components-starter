@@ -12,10 +12,10 @@ import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
 import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.observable.list.ObservableListWrapper
 import com.lightningkite.kotlin.observable.property.bind
-import com.lightningkite.kotlin.text.toFloatMaybe
 import org.jetbrains.anko.*
 
 /**
+ * A [AnkoViewController] used for demonstrating observable lists.
  * Created by jivie on 2/10/16.
  */
 class ObservableListVC() : AnkoViewController() {
@@ -46,7 +46,7 @@ class ObservableListVC() : AnkoViewController() {
             }
 
             stickyHeaders(items, {
-                when (it.toFloatMaybe()) {
+                when (it.toFloatOrNull()) {
                     null -> "Not a Number"
                     in 0..5 -> "Low"
                     else -> "High"

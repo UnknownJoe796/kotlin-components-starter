@@ -1,9 +1,9 @@
 package com.ivieleague.kotlin_components_starter
 
-import com.github.salomonbrys.kotson.jsonObject
 import com.lightningkite.kotlin.networking.OkHttpApi
 import com.lightningkite.kotlin.networking.TypedResponse
-import com.lightningkite.kotlin.networking.lambdaGson
+import com.lightningkite.kotlin.networking.jackson.jacksonObject
+import com.lightningkite.kotlin.networking.jackson.lambdaJackson
 
 /**
  * An example API.
@@ -17,7 +17,7 @@ object ExampleAPI : OkHttpApi {
 
     fun getPosts() = requestBuilder("/posts")
             .get()
-            .lambdaGson<List<Post>>()
+            .lambdaJackson<List<Post>>()
 
     fun login(email: String, password: String): () -> TypedResponse<LoginData> = {
 
@@ -29,8 +29,7 @@ object ExampleAPI : OkHttpApi {
             TypedResponse(200, LoginData(userId = 0, jwt = "testjwt", email = testEmail))
         } else {
             //Login failure
-            TypedResponse(400, null, errorBytes = jsonObject(
-                    "error" to "Your credentials are invalid.  The test login is 'test@gmail.com' and 'testpass'."
+            TypedResponse(400, null, errorBytes = jacksonObject("error" to "Your credentials are invalid.  The test login is 'test@gmail.com' and 'testpass'."
             ).toString().toByteArray())
         }
     }

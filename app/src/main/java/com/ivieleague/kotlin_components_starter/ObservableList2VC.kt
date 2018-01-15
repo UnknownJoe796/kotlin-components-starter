@@ -20,6 +20,7 @@ import com.lightningkite.kotlin.range.random
 import org.jetbrains.anko.*
 
 /**
+ * A [AnkoViewController] used for demonstrating observable lists.
  * Created by jivie on 2/10/16.
  */
 class ObservableList2VC() : AnkoViewController() {
@@ -47,7 +48,7 @@ class ObservableList2VC() : AnkoViewController() {
                     textSize = 18f
                     minimumHeight = dip(40)
                     backgroundResource = selectableItemBackgroundResource
-                    onLongClick {
+                    setOnLongClickListener {
                         items.removeAt(obs.position)
                         true
                     }

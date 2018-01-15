@@ -6,7 +6,6 @@ import android.view.View
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
 import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.anko.viewcontrollers.containers.VCStack
-import com.lightningkite.kotlin_components_starter.styleDefault
 import org.jetbrains.anko.AnkoContext
 import org.jetbrains.anko.button
 import org.jetbrains.anko.textView

@@ -4,6 +4,7 @@ import android.content.res.Resources
 import android.view.View
 import android.widget.Button
 import com.lightningkite.kotlin.anko.FullInputType
+import com.lightningkite.kotlin.anko.async.UIThread
 import com.lightningkite.kotlin.anko.full.captureProgress
 import com.lightningkite.kotlin.anko.observable.bindString
 import com.lightningkite.kotlin.anko.observable.progressLayout
@@ -15,7 +16,8 @@ import com.lightningkite.kotlin.anko.textInputEditText
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
 import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.anko.viewcontrollers.dialogs.infoDialog
-import com.lightningkite.kotlin.async.invokeAsync
+import com.lightningkite.kotlin.async.Async
+import com.lightningkite.kotlin.async.invokeOn
 import com.lightningkite.kotlin.networking.TypedResponse
 import com.lightningkite.kotlin.networking.captureFailure
 import com.lightningkite.kotlin.networking.captureSuccess
@@ -93,13 +95,13 @@ class ExampleLoginVC(val onLogin: (LoginData) -> Unit) : AnkoViewController() {
                         if (isValid()) {
                             attemptLogin()
                                     .captureProgress(runningObs) //sets the observable to true when task is started, false when complete
-                                    .captureSuccess { loginData: LoginData ->
+                                    .captureSuccess(UIThread) { loginData: LoginData ->
                                         onLogin.invoke(loginData)
                                     }
-                                    .captureFailure { response: TypedResponse<LoginData> ->
+                                    .captureFailure(UIThread) { response: TypedResponse<LoginData> ->
                                         context.infoDialog(message = "You failed to log in.  Response from server: \n${response.errorString}")
                                     }
-                                    .invokeAsync()
+                                    .invokeOn(Async)
                         }
                     }
                 }.lparams(matchParent, wrapContent) { margin = dip(8) }

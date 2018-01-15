@@ -5,13 +5,16 @@ import android.view.Gravity
 import android.view.View
 import com.lightningkite.kotlin.anko.animation.animateHeight
 import com.lightningkite.kotlin.anko.animation.transitionView
+import com.lightningkite.kotlin.anko.async.UIThread
 import com.lightningkite.kotlin.anko.lifecycle
 import com.lightningkite.kotlin.anko.networking.image.lambdaBitmapExif
 import com.lightningkite.kotlin.anko.progressButton
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
 import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.anko.viewcontrollers.dialogs.inputDialog
-import com.lightningkite.kotlin.async.invokeAsync
+import com.lightningkite.kotlin.async.Async
+import com.lightningkite.kotlin.async.invokeOn
+import com.lightningkite.kotlin.async.thenOn
 import com.lightningkite.kotlin.observable.property.StandardObservableProperty
 import com.lightningkite.kotlin.observable.property.bind
 import com.lightningkite.kotlin.range.random
@@ -79,7 +82,7 @@ class NetImageTestVC() : AnkoViewController() {
                                 .url(url)
                                 .get()
                                 .lambdaBitmapExif(context) //this last one builds the request into a lambda, which can then be run using invoke()
-                                .invokeAsync { response ->
+                                .thenOn(UIThread) { response ->
                                     //this invokes the lambda on a separate thread, then runs this callback on the UI thread
                                     if (response.isSuccessful()) {
                                         imageBitmap = response.result
@@ -89,7 +92,7 @@ class NetImageTestVC() : AnkoViewController() {
                                         response.exception?.printStackTrace()
                                         this@transitionView.animate("fail") //transitions us to the "fail" view
                                     }
-                                }
+                                }.invokeOn(Async)
                     }
                 }
             }.tag("image")
