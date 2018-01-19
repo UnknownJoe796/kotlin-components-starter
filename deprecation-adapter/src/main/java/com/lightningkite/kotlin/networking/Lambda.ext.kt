@@ -1,3 +1,6 @@
+@file:JvmName("Deprecated")
+@file:JvmMultifileClass
+
 package com.lightningkite.kotlin.networking
 
 import com.lightningkite.kotlin.anko.async.UIThread
@@ -6,13 +9,13 @@ import com.lightningkite.kotlin.anko.async.UIThread
         "captureSuccess(UIThread, onFailure)",
         "com.lightningkite.kotlin.anko.async.UIThread"
 ))
-inline fun <T> (() -> TypedResponse<T>).captureSuccess(crossinline onSuccess: (T) -> Unit): () -> TypedResponse<T> = captureSuccess(UIThread, onSuccess)
+inline fun <T> (() -> TypedResponse<T>).captureSuccess(crossinline onSuccess: (T) -> Unit): () -> TypedResponse<T> = thenOnSuccess(UIThread, onSuccess)
 
 @Deprecated("Use 'captureFailure' with executor parameter instead.", ReplaceWith(
         "captureFailure(UIThread, onFailure)",
         "com.lightningkite.kotlin.anko.async.UIThread"
 ))
-inline fun <T> (() -> TypedResponse<T>).captureFailure(crossinline onFailure: (TypedResponse<T>) -> Unit): () -> TypedResponse<T> = captureFailure(UIThread, onFailure)
+inline fun <T> (() -> TypedResponse<T>).captureFailure(crossinline onFailure: (TypedResponse<T>) -> Unit): () -> TypedResponse<T> = thenOnFailure(UIThread, onFailure)
 
 
 @Deprecated("Use 'transformResult' instead.", ReplaceWith(

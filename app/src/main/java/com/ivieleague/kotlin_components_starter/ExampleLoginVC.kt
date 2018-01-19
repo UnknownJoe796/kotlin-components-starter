@@ -19,8 +19,8 @@ import com.lightningkite.kotlin.anko.viewcontrollers.dialogs.infoDialog
 import com.lightningkite.kotlin.async.Async
 import com.lightningkite.kotlin.async.invokeOn
 import com.lightningkite.kotlin.networking.TypedResponse
-import com.lightningkite.kotlin.networking.captureFailure
-import com.lightningkite.kotlin.networking.captureSuccess
+import com.lightningkite.kotlin.networking.thenOnFailure
+import com.lightningkite.kotlin.networking.thenOnSuccess
 import com.lightningkite.kotlin.observable.property.MutableObservableProperty
 import com.lightningkite.kotlin.observable.property.StandardObservableProperty
 import com.lightningkite.kotlin.text.isEmail
@@ -95,10 +95,10 @@ class ExampleLoginVC(val onLogin: (LoginData) -> Unit) : AnkoViewController() {
                         if (isValid()) {
                             attemptLogin()
                                     .captureProgress(runningObs) //sets the observable to true when task is started, false when complete
-                                    .captureSuccess(UIThread) { loginData: LoginData ->
+                                    .thenOnSuccess(UIThread) { loginData: LoginData ->
                                         onLogin.invoke(loginData)
                                     }
-                                    .captureFailure(UIThread) { response: TypedResponse<LoginData> ->
+                                    .thenOnFailure(UIThread) { response: TypedResponse<LoginData> ->
                                         context.infoDialog(message = "You failed to log in.  Response from server: \n${response.errorString}")
                                     }
                                     .invokeOn(Async)

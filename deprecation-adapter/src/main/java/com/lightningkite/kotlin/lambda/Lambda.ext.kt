@@ -1,3 +1,5 @@
+@file:JvmName("Deprecated")
+
 package com.lightningkite.kotlin.lambda
 
 /**

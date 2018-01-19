@@ -7,15 +7,16 @@ import android.text.InputType
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
+import com.lightningkite.kotlin.anko.*
 import com.lightningkite.kotlin.observable.property.MutableObservableProperty
 import com.lightningkite.kotlin.observable.property.StandardObservableProperty
+import com.lightningkite.kotlin.observable.property.bind
+import com.lightningkite.kotlin.text.isEmail
 import org.jetbrains.anko.*
-import org.jetbrains.anko.custom.ankoView
 import org.jetbrains.anko.design.textInputLayout
 import java.text.NumberFormat
 import java.util.*
@@ -416,6 +417,3 @@ class FormLayout(ctx: Context) : _LinearLayout(ctx) {
         }
     }
 }
-
-@Deprecated("Instead of using a FormLayout, use standard layouts instead and then use a collection of Validations to validate.")
-inline fun ViewManager.formLayout(init: FormLayout.() -> Unit) = ankoView(::FormLayout, 0, init)

@@ -1,3 +1,6 @@
+@file:JvmName("Deprecated")
+@file:JvmMultifileClass
+
 package com.lightningkite.kotlin.networking
 
 import com.fasterxml.jackson.core.type.TypeReference

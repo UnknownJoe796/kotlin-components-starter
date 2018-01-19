@@ -2,10 +2,8 @@ package com.lightningkite.kotlin.anko
 
 import android.content.Context
 import android.database.DataSetObserver
-import android.view.ViewManager
 import android.widget.LinearLayout
 import android.widget.ListAdapter
-import org.jetbrains.anko.custom.ankoView
 import org.jetbrains.anko.matchParent
 import org.jetbrains.anko.wrapContent
 
@@ -95,12 +93,4 @@ open class AdapterLinearLayout(context: Context, val stretchMode: Boolean) : Lin
             if (item != null) func(item) else false
         }
     }
-}
-
-@Deprecated("Old type of adapter")
-@Suppress("NOTHING_TO_INLINE") inline fun ViewManager.adapterLinearLayout() = adapterLinearLayout {}
-
-@Deprecated("Old type of adapter")
-inline fun ViewManager.adapterLinearLayout(stretchMode: Boolean = false, init: AdapterLinearLayout.() -> Unit): AdapterLinearLayout {
-    return ankoView({ AdapterLinearLayout(it, stretchMode) }, 0, init)
 }

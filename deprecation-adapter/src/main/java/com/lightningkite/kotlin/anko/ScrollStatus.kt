@@ -1,7 +1,6 @@
 package com.lightningkite.kotlin.anko
 
 import android.widget.AbsListView
-import android.widget.ListView
 
 /**
  * When attached as a ListView scroll listener, it can be used to obtain information about where
@@ -34,10 +33,4 @@ class ScrollStatus() : AbsListView.OnScrollListener {
     override fun onScrollStateChanged(view: AbsListView?, scrollState: Int) {
     }
 
-}
-
-fun ListView.scrollStatus(): ScrollStatus {
-    val listener = ScrollStatus()
-    setOnScrollListener(listener)
-    return listener
 }

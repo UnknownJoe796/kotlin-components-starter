@@ -31,11 +31,13 @@ import android.content.Context
 import android.database.DataSetObserver
 import android.graphics.Rect
 import android.util.AttributeSet
-import android.view.*
+import android.view.GestureDetector
+import android.view.MotionEvent
+import android.view.View
+import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ListAdapter
 import android.widget.Scroller
-import org.jetbrains.anko.custom.ankoView
 import java.util.*
 import kotlin.properties.Delegates
 
@@ -360,9 +362,4 @@ class HorizontalListView(context: Context, attrs: AttributeSet? = null) : Adapte
     }
 
 
-}
-
-@Suppress("NOTHING_TO_INLINE") inline fun ViewManager.horizontalListView() = horizontalListView {}
-inline fun ViewManager.horizontalListView(init: HorizontalListView.() -> Unit): HorizontalListView {
-    return ankoView({ HorizontalListView(it, null) }, 0, init)
 }

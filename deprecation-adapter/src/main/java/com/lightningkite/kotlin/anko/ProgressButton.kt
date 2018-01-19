@@ -4,14 +4,11 @@ import android.content.Context
 import android.view.Gravity
 import android.view.MotionEvent
 import android.view.View
-import android.view.ViewManager
 import android.widget.Button
 import android.widget.ProgressBar
 import org.jetbrains.anko._FrameLayout
-import org.jetbrains.anko.custom.ankoView
 import org.jetbrains.anko.dip
 import org.jetbrains.anko.matchParent
-import org.jetbrains.anko.textResource
 
 /**
  * This "button" has both a button and a progress bar within it, making it useful for actions that take time.
@@ -101,22 +98,4 @@ class ProgressButton(context: Context) : _FrameLayout(context) {
 //        } else false
         return true
     }
-}
-
-inline fun ViewManager.progressButton(init: ProgressButton.() -> Unit): ProgressButton {
-    return ankoView({ ProgressButton(it) }, 0, init)
-}
-
-inline fun ViewManager.progressButton(text: String, init: ProgressButton.() -> Unit): ProgressButton {
-    return ankoView({ ProgressButton(it) }, 0, {
-        button.text = text
-        init()
-    })
-}
-
-inline fun ViewManager.progressButton(textResource: Int, init: ProgressButton.() -> Unit): ProgressButton {
-    return ankoView({ ProgressButton(it) }, 0, {
-        button.textResource = textResource
-        init()
-    })
 }

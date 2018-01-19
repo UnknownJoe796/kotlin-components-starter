@@ -1,3 +1,5 @@
+@file:JvmName("Deprecated")
+
 package com.lightningkite.kotlin.text
 
 @Deprecated("Use built-in functionality instead.", ReplaceWith(

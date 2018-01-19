@@ -4,8 +4,6 @@ import android.graphics.Canvas
 import android.graphics.Rect
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import org.jetbrains.anko.AnkoContext
-import org.jetbrains.anko.AnkoContextImpl
 
 /**
  * Puts a footer on a RecyclerView.
@@ -47,11 +45,4 @@ class FooterItemDecoration(val myView: View) : RecyclerView.ItemDecoration() {
             outRect.setEmpty();
         }
     }
-}
-
-@Deprecated("Doesn't work if list is empty.")
-inline fun RecyclerView.footer(
-        crossinline makeView: AnkoContext<Unit>.() -> Unit
-) {
-    addItemDecoration(FooterItemDecoration(AnkoContextImpl(context, Unit, false).apply { makeView() }.view))
 }

@@ -1,3 +1,6 @@
+@file:JvmName("Deprecated")
+@file:JvmMultifileClass
+
 package com.lightningkite.kotlin.anko.observable
 
 import android.text.InputType

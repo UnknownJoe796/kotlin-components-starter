@@ -1,8 +1,6 @@
 package com.lightningkite.kotlin.anko
 
-import android.widget.EditText
 import java.text.DecimalFormat
-import java.text.NumberFormat
 
 /**
  * Deals with numerical strings
@@ -154,18 +152,5 @@ object NumericalString {
                 return input.length
             }
         }
-    }
-}
-
-@Deprecated("Doesn't belong in general library.")
-fun EditText.autoComma(format: NumberFormat) {
-    textChanger {
-        val resultString = format.format(it.after.filter {
-            it.isDigit()
-                    || it == NumericalString.decimalChar
-                    || it == NumericalString.negativeChar
-        }.toDoubleOrNull() ?: 0.0)
-        val insertionPoint = NumericalString.transformPosition(it.after, resultString, it.insertionPoint + it.replacement.length).coerceIn(0, resultString.length)
-        resultString to insertionPoint..insertionPoint
     }
 }
