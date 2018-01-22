@@ -2,12 +2,15 @@ package com.ivieleague.kotlin_components_starter
 
 import android.view.Gravity
 import android.view.View
+import com.lightningkite.kotlin.anko.animation.swapView
 import com.lightningkite.kotlin.anko.elevationCompat
 import com.lightningkite.kotlin.anko.lifecycle
+import com.lightningkite.kotlin.anko.observable.CentralRenderMappings
+import com.lightningkite.kotlin.anko.observable.bindRenderMap
 import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
 import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.anko.viewcontrollers.containers.VCStack
-import com.lightningkite.kotlin.lifecycle.bind
+import com.lightningkite.kotlin.observable.property.bind
 import org.jetbrains.anko.*
 import org.jetbrains.anko.appcompat.v7.actionMenuView
 import org.jetbrains.anko.appcompat.v7.toolbar
@@ -23,9 +26,9 @@ import org.jetbrains.anko.design.coordinatorLayout
  * Created by jivie on 2/11/16.
  */
 class MainVC() : AnkoViewController() {
-    val stack = autoDispose(VCStack().apply {
+    val stack = VCStack().apply {
         push(SelectorVC(this@MainVC))
-    })
+    }
 
     override fun createView(ui: AnkoContext<VCContext>): View = ui.verticalLayout {
         toolbar {
@@ -33,7 +36,7 @@ class MainVC() : AnkoViewController() {
             actionMenuView {
             }.lparams(Gravity.RIGHT)
 
-            lifecycle.bind(stack.onSwap, stack.current) {
+            lifecycle.bind(stack) {
                 this.title = it.getTitle(resources)
                 setNavigationOnClickListener { stack.pop() }
                 if (stack.size > 1) {
@@ -46,7 +49,7 @@ class MainVC() : AnkoViewController() {
         }.lparams(matchParent, wrapContent)
 
         coordinatorLayout {
-            viewContainer(ui.owner, stack).lparams(matchParent, matchParent)
+            this.swapView { bindRenderMap(ui.owner, stack, CentralRenderMappings) }.lparams(matchParent, matchParent)
         }.lparams(matchParent, 0, 1f)
     }
 
