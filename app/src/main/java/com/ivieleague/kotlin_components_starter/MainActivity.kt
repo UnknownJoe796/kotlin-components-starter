@@ -1,16 +1,19 @@
 package com.ivieleague.kotlin_components_starter
 
-import com.lightningkite.kotlin.anko.viewcontrollers.ViewController
-import com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCActivity
+import android.os.Bundle
+import com.lightningkite.kotlin.anko.activity.AccessibleActivity
 
 /**
  * The main activity is mostly empty when using [ViewController]s.
  */
-class MainActivity : VCActivity() {
+class MainActivity : AccessibleActivity() {
 
     companion object {
-        var main = MainVC()
+        var main = MainScreen()
     }
 
-    override val viewController: ViewController get() = main
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(main.invoke(this))
+    }
 }

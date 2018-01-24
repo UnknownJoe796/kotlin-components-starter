@@ -1,9 +1,11 @@
 package com.ivieleague.kotlin_components_starter
 
-import android.content.res.Resources
 import android.view.View
 import android.widget.Button
 import com.lightningkite.kotlin.anko.FullInputType
+import com.lightningkite.kotlin.anko.activity.ActivityAccess
+import com.lightningkite.kotlin.anko.activity.ViewGenerator
+import com.lightningkite.kotlin.anko.activity.anko
 import com.lightningkite.kotlin.anko.async.UIThread
 import com.lightningkite.kotlin.anko.full.captureProgress
 import com.lightningkite.kotlin.anko.observable.bindString
@@ -13,8 +15,6 @@ import com.lightningkite.kotlin.anko.observable.validation.validation
 import com.lightningkite.kotlin.anko.observable.validation.withValidation
 import com.lightningkite.kotlin.anko.onDone
 import com.lightningkite.kotlin.anko.textInputEditText
-import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
-import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
 import com.lightningkite.kotlin.anko.viewcontrollers.dialogs.infoDialog
 import com.lightningkite.kotlin.async.Async
 import com.lightningkite.kotlin.async.invokeOn
@@ -31,9 +31,9 @@ import org.jetbrains.anko.design.textInputLayout
  * An example login view.
  * Created by joseph on 11/2/17.
  */
-class ExampleLoginVC(val onLogin: (LoginData) -> Unit) : AnkoViewController() {
+class ExampleLoginVC(val onLogin: (LoginData) -> Unit) : ViewGenerator {
 
-    override fun getTitle(resources: Resources): String = "Example Login"
+    override fun toString(): String = "Example Login"
 
     //Business Logic
 
@@ -58,54 +58,56 @@ class ExampleLoginVC(val onLogin: (LoginData) -> Unit) : AnkoViewController() {
 
     //Views
 
-    override fun createView(ui: AnkoContext<VCContext>): View = ui.scrollView {
-        isFillViewport = true
+    override fun invoke(access: ActivityAccess): View = access.anko {
+        scrollView {
+            isFillViewport = true
 
-        verticalLayout {
-            padding = dip(8)
+            verticalLayout {
+                padding = dip(8)
 
-            var loginButton: Button? = null
+                var loginButton: Button? = null
 
-            textInputLayout {
-                hint = context.getString(R.string.email)
-                textInputEditText {
-                    inputType = FullInputType.EMAIL
-                    bindString(emailObs)
-                    bindError(emailObs)
-                }
-            }.lparams(matchParent, wrapContent) { margin = dip(8) }
-
-            textInputLayout {
-                hint = context.getString(R.string.password)
-                textInputEditText {
-                    inputType = FullInputType.PASSWORD
-                    bindString(passwordObs)
-                    bindError(passwordObs)
-                    onDone {
-                        loginButton!!.performClick()
+                textInputLayout {
+                    hint = context.getString(R.string.email)
+                    textInputEditText {
+                        inputType = FullInputType.EMAIL
+                        bindString(emailObs)
+                        bindError(emailObs)
                     }
-                }
-            }.lparams(matchParent, wrapContent) { margin = dip(8) }
+                }.lparams(matchParent, wrapContent) { margin = dip(8) }
 
-            progressLayout { runningObs: MutableObservableProperty<Boolean> ->
-                button {
-                    loginButton = this
-                    text = context.getString(R.string.log_in)
-                    setOnClickListener {
-                        if (isValid()) {
-                            attemptLogin()
-                                    .captureProgress(runningObs) //sets the observable to true when task is started, false when complete
-                                    .thenOnSuccess(UIThread) { loginData: LoginData ->
-                                        onLogin.invoke(loginData)
-                                    }
-                                    .thenOnFailure(UIThread) { response: TypedResponse<LoginData> ->
-                                        context.infoDialog(message = "You failed to log in.  Response from server: \n${response.errorString}")
-                                    }
-                                    .invokeOn(Async)
+                textInputLayout {
+                    hint = context.getString(R.string.password)
+                    textInputEditText {
+                        inputType = FullInputType.PASSWORD
+                        bindString(passwordObs)
+                        bindError(passwordObs)
+                        onDone {
+                            loginButton!!.performClick()
                         }
                     }
                 }.lparams(matchParent, wrapContent) { margin = dip(8) }
+
+                progressLayout { runningObs: MutableObservableProperty<Boolean> ->
+                    button {
+                        loginButton = this
+                        text = context.getString(R.string.log_in)
+                        setOnClickListener {
+                            if (isValid()) {
+                                attemptLogin()
+                                        .captureProgress(runningObs) //sets the observable to true when task is started, false when complete
+                                        .thenOnSuccess(UIThread) { loginData: LoginData ->
+                                            onLogin.invoke(loginData)
+                                        }
+                                        .thenOnFailure(UIThread) { response: TypedResponse<LoginData> ->
+                                            context.infoDialog(message = "You failed to log in.  Response from server: \n${response.errorString}")
+                                        }
+                                        .invokeOn(Async)
+                            }
+                        }
+                    }.lparams(matchParent, wrapContent) { margin = dip(8) }
+                }.lparams(matchParent, wrapContent)
             }.lparams(matchParent, wrapContent)
-        }.lparams(matchParent, wrapContent)
+        }
     }
 }

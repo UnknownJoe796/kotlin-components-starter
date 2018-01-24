@@ -21,6 +21,7 @@
         <activity
             android:name="com.lightningkite.kotlin.anko.viewcontrollers.implementations.VCDialogActivity"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".new.MainActivity" />
     </application>
 
 </manifest>

@@ -1,30 +1,25 @@
 package com.ivieleague.kotlin_components_starter
 
-import android.content.res.Resources
 import android.view.Gravity
 import android.view.View
+import com.lightningkite.kotlin.anko.activity.ActivityAccess
+import com.lightningkite.kotlin.anko.activity.ViewGenerator
+import com.lightningkite.kotlin.anko.activity.anko
 import com.lightningkite.kotlin.anko.lifecycle
 import com.lightningkite.kotlin.anko.observable.adapter.listAdapter
 import com.lightningkite.kotlin.anko.selectableItemBackgroundResource
 import com.lightningkite.kotlin.anko.verticalRecyclerView
-import com.lightningkite.kotlin.anko.viewcontrollers.AnkoViewController
-import com.lightningkite.kotlin.anko.viewcontrollers.VCContext
-import com.lightningkite.kotlin.anko.viewcontrollers.ViewController
 import com.lightningkite.kotlin.observable.property.bind
 import org.jetbrains.anko.*
 import java.util.*
 
 /**
- * A [ViewController] for selecting which demo you want to view.
+ * A [ViewGenerator] for selecting which demo you want to view.
  * Created by jivie on 5/5/16.
  */
-class SelectorVC(val main: MainVC) : AnkoViewController() {
+class SelectorScreen(val main: MainScreen) : ViewGenerator {
 
-    override fun getTitle(resources: Resources): String {
-        return resources.getString(R.string.main_menu)
-    }
-
-    val demos: ArrayList<Pair<String, () -> ViewController>> = arrayListOf(
+    val demos: ArrayList<Pair<String, () -> ViewGenerator>> = arrayListOf(
             "Example Login" to {
                 ExampleLoginVC({
                     main.stack.pop()
@@ -39,7 +34,8 @@ class SelectorVC(val main: MainVC) : AnkoViewController() {
             "List from Network" to { NetworkListVC() }
     )
 
-    override fun createView(ui: AnkoContext<VCContext>): View = ui.verticalLayout {
+    override fun invoke(access: ActivityAccess): View = access.anko {
+        verticalLayout {
 
         textView(R.string.welcome_message) {
             minimumHeight = dip(48)
@@ -61,6 +57,7 @@ class SelectorVC(val main: MainVC) : AnkoViewController() {
                     }
                 }.lparams(matchParent, wrapContent)
             }
+        }
         }
     }
 }

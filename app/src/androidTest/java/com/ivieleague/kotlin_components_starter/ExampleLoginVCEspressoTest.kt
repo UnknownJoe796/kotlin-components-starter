@@ -27,7 +27,7 @@ import org.junit.runner.RunWith
 class ExampleLoginVCEspressoTest {
     var loginData: LoginData? = null
     init {
-        MainActivity.main = MainVC().apply {
+        MainActivity.main = MainScreen().apply {
             stack.root()
             stack.push(ExampleLoginVC({ loginData = it; stack.pop() }))
         }
