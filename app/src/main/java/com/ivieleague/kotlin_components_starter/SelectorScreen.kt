@@ -31,7 +31,19 @@ class SelectorScreen(val main: MainScreen) : ViewGenerator {
             "Observable Property" to { ObservablePropertyTestVC() },
             "View Controller Stacks" to { StackDemoVC(main.stack) },
             "Coordinator Layout" to { CoordinatorLayoutTestVC() },
-            "List from Network" to { NetworkListVC() }
+            "List from Network" to { NetworkListVC() },
+            "Just a Lambda View" to {
+                { access: ActivityAccess ->
+                    access.anko {
+                        verticalLayout {
+                            gravity = Gravity.CENTER
+                            textView {
+                                text = "I'm just a lambda - not even a class!"
+                            }
+                        }
+                    }
+                }
+            }
     )
 
     override fun invoke(access: ActivityAccess): View = access.anko {
